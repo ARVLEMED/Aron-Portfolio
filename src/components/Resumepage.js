@@ -29,7 +29,7 @@ const Resume = () => {
             <li><strong>Back-end Development:</strong> Flask, Flask-SQLAlchemy</li>
             <li><strong>Version Control:</strong> Git, GitHub</li>
             <li><strong>Database Management:</strong> SQLite, PostgreSQL</li>
-            <li><strong>Tools & Platforms:</strong> Netlify, Render, Render</li>
+            <li><strong>Tools & Platforms:</strong> Netlify, Render</li>
           </ul>
         </div>
       </section>
