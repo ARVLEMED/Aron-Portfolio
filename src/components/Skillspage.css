@@ -1,72 +1,101 @@
-/* src/components/SkillsPage.css */
+@import 'https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css';
+
 .skills-page {
-    padding: 40px;
-    background: linear-gradient(45deg, #e0f7fa, #80deea); 
-    color: #333;
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  .skills-page h1 {
-    font-size: 2.5rem;
-    color: #00796b; 
-    text-align: center;
-    margin-bottom: 110px;
-  }
-  
+  padding: 2.5rem;
+  background: linear-gradient(45deg, #e0f7fa, #80deea);
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  min-height: calc(100vh - 200px);
+}
+
+.skills-page.dark {
+  background: linear-gradient(45deg, #2d3748, #4a5568);
+  color: #e2e8f0;
+}
+
+.skills-page h1 {
+  font-size: 2.5rem;
+  color: #00796b;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.skills-page.dark h1 {
+  color: #4fd1c5;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.875rem;
+  flex-wrap: wrap;
+}
+
+.skills-left,
+.skills-right {
+  width: 45%;
+}
+
+.skills-category {
+  margin-bottom: 1.875rem;
+}
+
+.skills-category h2 {
+  font-size: 1.8rem;
+  color: #00796b;
+  margin-bottom: 0.9375rem;
+  text-transform: uppercase;
+}
+
+.skills-page.dark .skills-category h2 {
+  color: #4fd1c5;
+}
+
+.skills-category ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills-category li {
+  font-size: 1.2rem;
+  margin-bottom: 0.625rem;
+}
+
+.skills-page.dark .skills-category li {
+  color: #e2e8f0;
+}
+
+.skills-category li:before {
+  content: '✔';
+  margin-right: 0.625rem;
+  color: #00796b;
+}
+
+.skills-page.dark .skills-category li:before {
+  color: #4fd1c5;
+}
+
+@media (max-width: 768px) {
   .skills-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    flex-wrap: wrap; 
+    flex-direction: column;
   }
-  
-  .skills-left, .skills-right {
-    width: 45%;
+
+  .skills-left,
+  .skills-right {
+    width: 100%;
   }
-  
-  .skills-category {
-    margin-bottom: 30px;
-  }
-  
+
   .skills-category h2 {
-    font-size: 1.8rem;
-    color: #00796b; 
-    margin-bottom: 15px;
-    text-transform: uppercase;
+    font-size: 1.5rem;
   }
-  
-  .skills-category ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
+
   .skills-category li {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+    font-size: 1rem;
   }
-  
-  .skills-category li:before {
-    content: '✔';
-    margin-right: 10px;
-    color: #00796b; 
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skills-category li {
+    transition: none;
   }
-  
-  /* Ensure responsiveness on smaller screens */
-  @media (max-width: 768px) {
-    .skills-container {
-      flex-direction: column;
-    }
-  
-    .skills-left, .skills-right {
-      width: 100%;
-    }
-  
-    .skills-category h2 {
-      font-size: 1.5rem;
-    }
-  
-    .skills-category li {
-      font-size: 1rem;
-    }
-  }
-  
+}

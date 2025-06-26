@@ -1,0 +1,87 @@
+@import 'https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css';
+
+.services {
+  padding: 2.5rem;
+  text-align: center;
+  background: linear-gradient(45deg, #e0f7fa, #80deea);
+  min-height: calc(100vh - 200px);
+}
+
+.services.dark {
+  background: linear-gradient(45deg, #2d3748, #4a5568);
+  color: #e2e8f0;
+}
+
+.services h1 {
+  font-size: 2.5rem;
+  color: #00796b;
+  margin-bottom: 2.5rem;
+}
+
+.services.dark h1 {
+  color: #4fd1c5;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1.5rem;
+  max-width: 75rem;
+  margin: auto;
+}
+
+.service-card {
+  background: #f4f4f4;
+  padding: 1.5rem;
+  border-radius: 0.625rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.services.dark .service-card {
+  background: #2d3748;
+  color: #e2e8f0;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.75rem;
+}
+
+.services.dark .service-card h3 {
+  color: #e2e8f0;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.services.dark .service-card p {
+  color: #a0aec0;
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding: 1.5rem;
+  }
+
+  .services h1 {
+    font-size: 2rem;
+  }
+
+  .services-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-card {
+    transition: none;
+  }
+}

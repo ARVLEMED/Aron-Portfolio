@@ -1,65 +1,89 @@
-/* src/components/Header.css */
+@import 'https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css';
+
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    background: linear-gradient(45deg, #4caf50, #00796b); 
-    color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2.5rem;
+  background: linear-gradient(45deg, #4caf50, #00796b);
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', sans-serif;
+}
+
+.header.dark {
+  background: linear-gradient(45deg, #2d3748, #4a5568);
+}
+
+.logo img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem;
+}
+
+.nav-links li {
+  font-size: 1.1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.header.dark .nav-links a {
+  color: #e2e8f0;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+.btn-toggle {
+  padding: 0.5rem 1rem;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.header.dark .btn-toggle {
+  background-color: #4fd1c5;
+}
+
+.btn-toggle:hover {
+  background-color: #005b4f;
+}
+
+.header.dark .btn-toggle:hover {
+  background-color: #2b6cb0;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  .logo h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 0;
-  }
-  
-  .logo p {
-    font-size: 1.2rem;
-    font-style: italic;
-  }
-  
+
   .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+    flex-direction: column;
+    gap: 0.625rem;
   }
-  
-  .nav-links li {
-    font-size: 1.1rem;
+
+  .btn-toggle {
+    margin-top: 0.625rem;
   }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  .nav-links a:hover {
-    color: #007bff;  
-  }
-  
-  @media (max-width: 768px) {
-    .header {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .nav-links {
-      flex-direction: column;
-      gap: 10px;
-    }
-  }
-  .logo img {
-    width: 70px; 
-    height: 70px; 
-    border-radius: 50%; 
-    object-fit: cover; 
-    border: 2px solid #fff; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-  }
-  
-    
+}

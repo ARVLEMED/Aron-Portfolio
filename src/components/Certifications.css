@@ -1,0 +1,108 @@
+@import 'https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css';
+
+.certifications {
+  padding: 2.5rem;
+  text-align: center;
+  background: linear-gradient(45deg, #e0f7fa, #80deea);
+  min-height: calc(100vh - 200px);
+}
+
+.certifications.dark {
+  background: linear-gradient(45deg, #2d3748, #4a5568);
+  color: #e2e8f0;
+}
+
+.certifications h1 {
+  font-size: 2.5rem;
+  color: #00796b;
+  margin-bottom: 2.5rem;
+}
+
+.certifications.dark h1 {
+  color: #4fd1c5;
+}
+
+.certifications-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1.5rem;
+  max-width: 75rem;
+  margin: auto;
+}
+
+.certification-card {
+  background: #f4f4f4;
+  padding: 1.5rem;
+  border-radius: 0.625rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.certifications.dark .certification-card {
+  background: #2d3748;
+  color: #e2e8f0;
+}
+
+.certification-card:hover {
+  transform: translateY(-5px);
+}
+
+.certification-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.75rem;
+}
+
+.certifications.dark .certification-card h3 {
+  color: #e2e8f0;
+}
+
+.certification-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.certifications.dark .certification-card p {
+  color: #a0aec0;
+}
+
+.cert-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: #00796b;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid #00796b;
+  border-radius: 0.3125rem;
+  transition: all 0.3s ease;
+}
+
+.certifications.dark .cert-link {
+  color: #4fd1c5;
+  border-color: #4fd1c5;
+}
+
+.cert-link:hover {
+  background-color: #00796b;
+  color: white;
+}
+
+.certifications.dark .cert-link:hover {
+  background-color: #4fd1c5;
+}
+
+@media (max-width: 768px) {
+  .certifications {
+    padding: 1.5rem;
+  }
+
+  .certifications h1 {
+    font-size: 2rem;
+  }
+
+  .certifications-list {
+    grid-template-columns: 1fr;
+  }
+}
