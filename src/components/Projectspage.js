@@ -5,6 +5,41 @@ import './Projects.css';
 
 const projects = [
   {
+    name: 'MediConnect Frontend',
+    description: 'Dashboard of MediConnect, a website that connects a patient with an ambulance, giving the client the power to book an ambulance,just like an Uber',
+    technologies: ['React', 'Tailwind CSS', 'TypeScript'],
+    github: 'https://github.com/ARVLEMED/MEDICONNECT-FRONTEND',
+    liveDemo: 'https://teal-snickerdoodle-476ffb.netlify.app/',
+  },
+   {
+    name: 'CEMA-TASK Frontend',
+    description: 'It is a React-based web application that helps doctors manage client consultations and health programs. It features a client queue for ongoing consultations, detailed consultation forms, and a programs management section. ',
+    technologies: ['React', 'CSS', 'Vite','Axios'],
+    github: 'https://github.com/ARVLEMED/CEMA-SE-TASK-FRONTEND',
+    liveDemo: 'https://cemahospitalsystem.netlify.app/',
+  },
+  {
+    name: 'CEMA-TASK Backend',
+    description: 'It is a Flask-based REST API backend for a healthcare management system. It provides functionality for user authentication, client management, consultation tracking, and program enrollment. The API is designed to support a frontend application for healthcare professionals to manage patients (clients), record consultations, and enroll clients in programs. ',
+    technologies: ['Flask', 'SQL', 'SQLAlchemy','JWT','RESTful API','Python'],
+    github: 'https://github.com/ARVLEMED/CEMA-SE-TASK-BACKEND',
+    
+  },
+  {
+    name: 'ED-TECH-SOLUTION-PROJECT-FRONT-END',
+    description: "The EdTech App is a web-based platform designed to streamline communication between teachers, parents, and administrators. It enables teachers to upload student results and welfare details, allowing parents to monitor their child's academic performance and well-being in school. ",
+    technologies: ['React', 'Redux', 'Tailwind CSS','Axios'],
+    github: 'https://github.com/ARVLEMED/ED-TECH-SOLUTION-PROJECT-FRONT-END',
+    liveDemo: 'https://byte-force-ed-tech.netlify.app/',
+  },
+   {
+    name: 'ED-TECH-SOLUTION-PROJECT-BACK-END',
+    description: 'This is the back-end for an educational technology solution, built with Flask and Python. It provides a RESTful API to manage users, students, teachers, classes, subjects, exams, results, welfare reports, and forms, with features like JWT authentication, soft deletes, and database migrations.',
+    technologies: ['Flask', 'SQL', 'SQLAlchemy','JWT','RESTful API','Python'],
+    github: 'https://github.com/ARVLEMED/ED-TECH-SOLUTION-PROJECT-BACK-END',
+    
+  },
+  {
     name: 'Health Awareness App Frontend',
     description: 'Frontend of a health awareness app with user-friendly UI and real-time data.',
     technologies: ['React', 'Tailwind CSS', 'Auth0'],
@@ -17,6 +52,13 @@ const projects = [
     technologies: ['Flask', 'SQLAlchemy', 'JWT Authentication'],
     github: 'https://github.com/ARVLEMED/Health-Awareness-App-Backend',
     liveDemo: 'https://health-awareness-app-backend-8.onrender.com',
+  },
+  {
+    name: 'Amazon-JS-Project',
+    description: 'An interactive replica of the Amazon shopping web page',
+    technologies: ['JavaScript', 'HTML', 'CSS'],
+    github: 'https://github.com/ARVLEMED/Amazon-JS-Project',
+    liveDemo: 'https://arvlemed.github.io/Amazon-JS-Project/',
   },
   {
     name: 'Rock Paper Scissors Game',
