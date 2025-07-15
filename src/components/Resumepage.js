@@ -19,14 +19,21 @@ const Resume = () => {
   };
 
   const handleDownloadPDF = () => {
-    const element = resumeRef.current;
-    html2pdf().set({
-      margin: [0.5, 0.5, 0.5, 0.5],
+  const element = resumeRef.current;
+  element.classList.add('pdf-content'); 
+  html2pdf()
+    .set({
+      margin: [0.3, 0.3, 0.3, 0.3], 
       filename: 'Aron_Kipkorir_Resume.pdf',
-      html2canvas: { scale: 2 },
+      html2canvas: { scale: 2, useCORS: true },
       jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' },
-    }).from(element).save();
-  };
+    })
+    .from(element)
+    .save()
+    .finally(() => {
+      element.classList.remove('pdf-content'); 
+    });
+};
 
   return (
     <div className={`resume ${darkMode ? 'dark' : ''}`} aria-label="Resume page">
@@ -35,7 +42,7 @@ const Resume = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        <h1>Aron Kipkorir's Resume</h1>
+        <h1>Aron Kipkorir</h1>
         <p>Software Engineer | Full Stack Developer | Healthcare Innovator</p>
       </motion.header>
 
@@ -45,16 +52,11 @@ const Resume = () => {
           variants={sectionVariants}
           initial="hidden"
           animate="visible"
-          role="region"
           aria-label="Professional Summary"
         >
           <h2>Professional Summary</h2>
           <p>
-            I’m a passionate and adaptive Software Engineer with strong skills in Python (Flask), JavaScript (React), and full-stack web development. I bring a unique blend of technology and healthcare expertise, having transitioned from a Registered Nurse to a Software Engineer. My experience spans designing and building responsive web applications, RESTful APIs, and database-driven systems using tools like Docker, Git, PostgreSQL, and SQLAlchemy.</p>
-
-<p>Trained at Moringa School and Strathmore University in liaison with Nairobi DevOps Community , I’ve developed a solid foundation in front-end and back-end development, CI/CD, containerization, and software best practices such as Agile and Scrum. I’m also well-versed in Linux, Bash scripting, and GitHub collaboration.</p>
-
-<p>What sets me apart is my background in healthcare — with hands-on experience in direct patient care, critical thinking, and problem-solving in high-pressure environments. I’m especially passionate about building tech solutions that improve healthcare delivery, education, and community well-being.
+           As an accomplished and versatile Software Engineer, I specialize in developing robust, scalable web applications with expertise in Python (Flask), JavaScript (React), and full-stack development. My unique background as a Registered Nurse enriches my technical proficiency with a deep understanding of healthcare workflows, enabling me to deliver innovative, user-focused solutions. I excel in designing and implementing responsive web applications, RESTful APIs, and database-driven systems, leveraging tools such as Docker, Git, PostgreSQL, and SQLAlchemy. With a proven ability to bridge technical and domain-specific challenges, I thrive in dynamic environments, consistently delivering high-quality, impactful software solutions.
           </p>
         </motion.section>
 
@@ -63,20 +65,17 @@ const Resume = () => {
           variants={sectionVariants}
           initial="hidden"
           animate="visible"
-          role="region"
           aria-label="Technical Skills"
         >
           <h2>Technical Skills</h2>
-          <div className="skills-list">
-            <ul>
-              <li><strong>Languages:</strong> JavaScript, Python</li>
-              <li><strong>Web Technologies:</strong> HTML, CSS, React, Flask, SQLite, PostgreSQL</li>
-              <li><strong>Back-end Development:</strong> Flask, Flask-SQLAlchemy</li>
-              <li><strong>Version Control:</strong> Git, GitHub</li>
-              <li><strong>Database Management:</strong> SQLite, PostgreSQL</li>
-              <li><strong>Tools & Platforms:</strong> Netlify, Render</li>
-            </ul>
-          </div>
+          <ul>
+            <li><strong>Languages:</strong> JavaScript, Python, Bash</li>
+            <li><strong>Web:</strong> HTML, CSS, React, Flask</li>
+            <li><strong>Back-end:</strong> Flask-SQLAlchemy, SQLite, PostgreSQL</li>
+            <li><strong>DevOps & Cloud:</strong> Docker, Kubernetes, Jenkins, Terraform, CI/CD, AWS EC2, IAM, Lambda, Elastic Beanstalk</li>
+            <li><strong>Tools:</strong> Git, GitHub, Netlify, Render</li>
+            <li><strong>Practices:</strong> Agile, Scrum, Linux, Bash Scripting</li>
+          </ul>
         </motion.section>
 
         <motion.section
@@ -84,18 +83,15 @@ const Resume = () => {
           variants={sectionVariants}
           initial="hidden"
           animate="visible"
-          role="region"
-          aria-label="Soft Skills"
+          aria-label="Professional Skills"
         >
           <h2>Soft Skills</h2>
           <ul>
-            <li><strong>Analytical & Critical Thinking:</strong> Strong problem-solving and decision-making abilities.</li>
-            <li><strong>Effective Communication & Teamwork:</strong> Collaborating efficiently with cross-functional teams to achieve project goals.</li>
-            <li><strong>Project Management:</strong> Experience in managing projects from concept to execution, ensuring timely delivery.</li>
-            <li><strong>Entrepreneurial Mindset:</strong> Identifying innovative opportunities, managing resources, and driving impact.</li>
-            <li><strong>Creative Problem Solving:</strong> Approaching challenges with a unique and inventive mindset.</li>
-            <li><strong>Leadership & Self-Management:</strong> Leading teams and projects while maintaining high standards of excellence.</li>
-            <li><strong>Human-Centered Design Thinking:</strong> Focusing on building solutions that prioritize user needs.</li>
+            <li>Problem-solving and critical thinking in technical and clinical environments</li>
+            <li>Effective communication and collaboration in Agile teams</li>
+            <li>Leadership and ownership of end-to-end software projects</li>
+            <li>User-focused design and human-centered thinking</li>
+            <li>Empathy, emotional intelligence, and a feedback-driven mindset</li>
           </ul>
         </motion.section>
 
@@ -104,13 +100,25 @@ const Resume = () => {
           variants={sectionVariants}
           initial="hidden"
           animate="visible"
-          role="region"
           aria-label="Experience"
         >
           <h2>Experience</h2>
-          <p><strong>Moringa School</strong> – Software Engineering Student <em>(September 2024 – March 2025)</em></p>
+
+          <p><strong>Strathmore University / Nairobi DevOps Community</strong> – DevOps & Cloud Native Training <em>(Apr 2025 – Jul 2025)</em></p>
           <ul>
-            <li>Participated in intensive training focused on Full Stack Web Development, including hands-on project work in HTML, CSS, JavaScript, React, Flask, and back-end technologies.</li>
+            <li>Undergoing intensive DevOps training covering CI/CD, Docker, Terraform, Jenkins, and Kubernetes.</li>
+            <li>Gained hands-on experience with AWS services including EC2, IAM, Lambda, and Elastic Beanstalk.</li>
+            <li>Developed automation skills using Bash scripting and infrastructure-as-code principles.</li>
+          </ul>
+
+          <p><strong>freeCodeCamp</strong> – Self-Directed Learning <em>(Mar 2025 – Present)</em></p>
+          <ul>
+            <li>Completed full stack projects and certifications in Frontend Libraries, JavaScript Algorithms, and APIs.</li>
+          </ul>
+
+          <p><strong>Moringa School</strong> – Software Engineering Student <em>(Sep 2024 – Mar 2025)</em></p>
+          <ul>
+            <li>Hands-on training in React, Flask, and PostgreSQL through project-based learning and peer collaboration.</li>
           </ul>
         </motion.section>
 
@@ -119,29 +127,13 @@ const Resume = () => {
           variants={sectionVariants}
           initial="hidden"
           animate="visible"
-          role="region"
           aria-label="Education"
         >
           <h2>Education</h2>
-          <p><strong>Moringa School</strong> – Full Stack Web Development <em>(September 2024 – March 2025)</em></p>
-          <p><strong>Daystar University</strong> – Bachelor of Science in Nursing <em>(August 2019 – November 2023)</em></p>
-        </motion.section>
-
-        <motion.section
-          className="resume-section"
-          variants={sectionVariants}
-          initial="hidden"
-          animate="visible"
-          role="region"
-          aria-label="Team Values"
-        >
-          <h2>Team Values</h2>
           <ul>
-            <li>Continuous Feedback Culture – Fostering growth through feedback and collaboration.</li>
-            <li>Open Communication – Transparent and effective communication at all levels.</li>
-            <li>Collaboration-Oriented – Working collectively toward shared goals.</li>
-            <li>Diversity & Inclusion – Embracing diversity to enhance creativity and problem-solving.</li>
-            <li>Emotional Intelligence – Cultivating empathy, self-awareness, and strong interpersonal skills.</li>
+            <li><strong>Moringa School</strong> – Full Stack Web Development <em>(Sep 2024 – Mar 2025)</em></li>
+            <li><strong>Daystar University</strong> – BSc. Nursing <em>(Aug 2019 – Nov 2023)</em></li>
+            <li><strong>Strathmore University</strong> – DevOps Certificate <em>(Apr 2025 – Jul 2025)</em></li>
           </ul>
         </motion.section>
       </div>
