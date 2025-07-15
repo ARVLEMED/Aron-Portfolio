@@ -4,14 +4,14 @@ import { ThemeContext } from '../App';
 import './Certifications.css';
 
 const certifications = [
- /* {
+  {
     id: 1,
     title: 'Full Stack Web Development',
     issuer: 'Moringa School',
     date: 'March 2025',
     description: 'Completed intensive training in HTML, CSS, JavaScript, React, Flask, and backend technologies.',
-    link: '#', 
-  },*/
+    link: '/Certificates/aron_kipkorir_moringa_software_engineering_cert.png', 
+  },
  {
   id: 2,
   title: 'Bachelor of Science in Nursing',
