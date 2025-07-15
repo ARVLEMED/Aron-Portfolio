@@ -1,136 +1,86 @@
-import React, { useContext } from 'react';
-import { motion } from 'framer-motion';
-import { ThemeContext } from '../App';
+import React from 'react';
 import './Skillspage.css';
 
 const SkillsPage = () => {
-  const { darkMode } = useContext(ThemeContext);
-
-  const listVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1, // Staggered blip effect
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, x: -20 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.4 } },
-  };
-
   return (
-    <div className={`skills-page ${darkMode ? 'dark' : ''}`} aria-label="Skills page">
-      <motion.h1
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        My Skills
-      </motion.h1>
+    <div className="skills-page">
+      <h1>My Skills</h1>
       <div className="skills-container">
+        {/* Left Side */}
         <div className="skills-left">
-          <motion.section
-            className="skills-category"
-            variants={listVariants}
-            initial="hidden"
-            animate="visible"
-            role="region"
-            aria-label="Programming Languages"
-          >
+          <section className="skills-category">
             <h2>Programming Languages</h2>
             <ul>
-              {['Python', 'JavaScript', 'SQL'].map((skill) => (
-                <motion.li key={skill} variants={itemVariants}>
-                  {skill}
-                </motion.li>
-              ))}
+              <li>Python</li>
+              <li>JavaScript</li>
+              <li>SQL</li>
+              <li>Bash</li>
             </ul>
-          </motion.section>
+          </section>
 
-          <motion.section
-            className="skills-category"
-            variants={listVariants}
-            initial="hidden"
-            animate="visible"
-            role="region"
-            aria-label="Web Technologies"
-          >
+          <section className="skills-category">
             <h2>Web Technologies</h2>
             <ul>
-              {['React', 'Flask', 'HTML & CSS'].map((skill) => (
-                <motion.li key={skill} variants={itemVariants}>
-                  {skill}
-                </motion.li>
-              ))}
+              <li>React</li>
+              <li>Flask</li>
+              <li>HTML & CSS</li>
             </ul>
-          </motion.section>
+          </section>
 
-          <motion.section
-            className="skills-category"
-            variants={listVariants}
-            initial="hidden"
-            animate="visible"
-            role="region"
-            aria-label="Database Management"
-          >
+          <section className="skills-category">
             <h2>Database Management</h2>
             <ul>
-              {['PostgreSQL', 'SQLite'].map((skill) => (
-                <motion.li key={skill} variants={itemVariants}>
-                  {skill}
-                </motion.li>
-              ))}
+              <li>PostgreSQL</li>
+              <li>SQLite</li>
             </ul>
-          </motion.section>
+          </section>
+
+          <section className="skills-category">
+            <h2>DevOps & Cloud</h2>
+            <ul>
+              <li>Docker</li>
+              <li>Kubernetes</li>
+              <li>Jenkins</li>
+              <li>Terraform</li>
+              <li>CI/CD Pipelines</li>
+              <li>AWS EC2</li>
+              <li>AWS IAM</li>
+              <li>AWS Lambda</li>
+              <li>AWS Elastic Beanstalk</li>
+              <li>Infrastructure as Code</li>
+              <li>Linux Server Administration</li>
+            </ul>
+          </section>
         </div>
 
+        {/* Right Side */}
         <div className="skills-right">
-          <motion.section
-            className="skills-category"
-            variants={listVariants}
-            initial="hidden"
-            animate="visible"
-            role="region"
-            aria-label="Tools & Platforms"
-          >
+          <section className="skills-category">
             <h2>Tools & Platforms</h2>
             <ul>
-             {['GitHub', 'Render', 'Netlify'].map((skill) => (
-  <motion.li key={skill} variants={itemVariants}>
-    {skill}
-  </motion.li>
-))}
-
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>Render</li>
+              <li>Netlify</li>
+              <li>Visual Studio Code</li>
+              <li>Postman</li>
             </ul>
-          </motion.section>
+          </section>
 
-          <motion.section
-            className="skills-category"
-            variants={listVariants}
-            initial="hidden"
-            animate="visible"
-            role="region"
-            aria-label="Soft Skills"
-          >
+          <section className="skills-category">
             <h2>Soft Skills</h2>
             <ul>
-              {[
-                'Analytical and Critical Thinking',
-                'Effective Communication',
-                'Creative Problem-Solving',
-                'Leadership and Self-Management',
-                'Project Management',
-                'Teamwork',
-              ].map((skill) => (
-                <motion.li key={skill} variants={itemVariants}>
-                  {skill}
-                </motion.li>
-              ))}
+              <li>Analytical and Critical Thinking</li>
+              <li>Effective Communication</li>
+              <li>Creative Problem-Solving</li>
+              <li>Leadership and Self-Management</li>
+              <li>Project Management</li>
+              <li>Teamwork</li>
+              <li>Human-Centered Design</li>
+              <li>Empathy and Emotional Intelligence</li>
+              <li>Agile & Scrum Collaboration</li>
             </ul>
-          </motion.section>
+          </section>
         </div>
       </div>
     </div>
