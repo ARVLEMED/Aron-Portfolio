@@ -19,21 +19,21 @@ const Resume = () => {
   };
 
   const handleDownloadPDF = () => {
-  const element = resumeRef.current;
-  element.classList.add('pdf-content'); 
-  html2pdf()
-    .set({
-      margin: [0.3, 0.3, 0.3, 0.3], 
-      filename: 'Aron_Kipkorir_Resume.pdf',
-      html2canvas: { scale: 2, useCORS: true },
-      jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' },
-    })
-    .from(element)
-    .save()
-    .finally(() => {
-      element.classList.remove('pdf-content'); 
-    });
-};
+    const element = resumeRef.current;
+    element.classList.add('pdf-content');
+    html2pdf()
+      .set({
+        margin: [0.2, 0.2, 0.2, 0.2],
+        filename: 'Aron_Kipkorir_Resume.pdf',
+        html2canvas: { scale: 1.5, useCORS: true },
+        jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' },
+      })
+      .from(element)
+      .save()
+      .finally(() => {
+        element.classList.remove('pdf-content');
+      });
+  };
 
   return (
     <div className={`resume ${darkMode ? 'dark' : ''}`} aria-label="Resume page">
@@ -44,6 +44,7 @@ const Resume = () => {
       >
         <h1>Aron Kipkorir</h1>
         <p>Software Engineer | Full Stack Developer | Healthcare Innovator</p>
+       
       </motion.header>
 
       <div ref={resumeRef} className="resume-content">
@@ -56,7 +57,7 @@ const Resume = () => {
         >
           <h2>Professional Summary</h2>
           <p>
-           As an accomplished and versatile Software Engineer, I specialize in developing robust, scalable web applications with expertise in Python (Flask), JavaScript (React), and full-stack development. My unique background as a Registered Nurse enriches my technical proficiency with a deep understanding of healthcare workflows, enabling me to deliver innovative, user-focused solutions. I excel in designing and implementing responsive web applications, RESTful APIs, and database-driven systems, leveraging tools such as Docker, Git, PostgreSQL, and SQLAlchemy. With a proven ability to bridge technical and domain-specific challenges, I thrive in dynamic environments, consistently delivering high-quality, impactful software solutions.
+            As a dynamic Software Engineer with a unique blend of healthcare expertise and technical proficiency, I specialize in crafting scalable, user-centric web applications using Python (Flask), JavaScript (React), and full-stack technologies. Transitioning from a Registered Nurse (BSc. Nursing, Daystar University), I bring a deep understanding of healthcare workflows to deliver impactful solutions. My hands-on experience includes building responsive web applications, RESTful APIs, and database-driven systems with PostgreSQL, SQLAlchemy, Docker, and Git. Currently advancing my expertise through intensive DevOps and Cloud Native training at Strathmore University, I am proficient in CI/CD pipelines, AWS services (EC2, IAM, Lambda, Elastic Beanstalk), and infrastructure-as-code with Terraform and Kubernetes. Through self-directed learning at FreeCodeCamp, I’ve honed skills in frontend libraries, APIs, and algorithms, complemented by project-based training at Moringa School. Passionate about automation and collaboration, I thrive in fast-paced environments, delivering innovative software solutions that bridge technology and real-world needs.
           </p>
         </motion.section>
 
@@ -70,11 +71,11 @@ const Resume = () => {
           <h2>Technical Skills</h2>
           <ul>
             <li><strong>Languages:</strong> JavaScript, Python, Bash</li>
-            <li><strong>Web:</strong> HTML, CSS, React, Flask</li>
-            <li><strong>Back-end:</strong> Flask-SQLAlchemy, SQLite, PostgreSQL</li>
-            <li><strong>DevOps & Cloud:</strong> Docker, Kubernetes, Jenkins, Terraform, CI/CD, AWS EC2, IAM, Lambda, Elastic Beanstalk</li>
+            <li><strong>Frontend:</strong> HTML, CSS, React</li>
+            <li><strong>Backend:</strong> Flask, SQLAlchemy, REST APIs, PostgreSQL, SQLite</li>
+            <li><strong>DevOps & Cloud:</strong> Docker, Kubernetes, Jenkins, Terraform, CI/CD, AWS (EC2, IAM, Lambda, Elastic Beanstalk)</li>
             <li><strong>Tools:</strong> Git, GitHub, Netlify, Render</li>
-            <li><strong>Practices:</strong> Agile, Scrum, Linux, Bash Scripting</li>
+            <li><strong>Practices:</strong> Agile, Scrum, Linux, Bash Scripting, CRUD Operations</li>
           </ul>
         </motion.section>
 
@@ -83,15 +84,56 @@ const Resume = () => {
           variants={sectionVariants}
           initial="hidden"
           animate="visible"
-          aria-label="Professional Skills"
+          aria-label="Projects"
+        >
+          <h2>Projects</h2>
+          <p><strong>Health Awareness App</strong> – React, Flask, PostgreSQL, JWT</p>
+          <ul>
+            <li>Built a full-stack health awareness app integrating React (frontend) and Flask (backend).</li>
+            <li>Developed REST APIs for handling medical data and user authentication (JWT Authentication).</li>
+            <li>Designed and managed a PostgreSQL database for storing medical information securely.</li>
+            <li>Applied Agile methodologies for iterative development and continuous improvements.</li>
+          </ul>
+          <p><strong>Tasklister App</strong> – JavaScript, HTML, CSS, CRUD Operations</p>
+          <ul>
+            <li>Created a task management application allowing users to add and delete tasks.</li>
+            <li>Applied CRUD principles to efficiently handle user interactions and task persistence.</li>
+            <li>More projects available on <a href="https://github.com/ARVLEMED">GitHub</a>.</li>
+          </ul>
+        </motion.section>
+
+        <motion.section
+          className="resume-section"
+          variants={sectionVariants}
+          initial="hidden"
+          animate="visible"
+          aria-label="Soft Skills"
         >
           <h2>Soft Skills</h2>
           <ul>
-            <li>Problem-solving and critical thinking in technical and clinical environments</li>
+            <li>Analytical and critical thinking in technical and clinical environments</li>
             <li>Effective communication and collaboration in Agile teams</li>
             <li>Leadership and ownership of end-to-end software projects</li>
             <li>User-focused design and human-centered thinking</li>
             <li>Empathy, emotional intelligence, and a feedback-driven mindset</li>
+            <li>Entrepreneurial mindset for identifying innovative opportunities</li>
+          </ul>
+        </motion.section>
+
+        <motion.section
+          className="resume-section"
+          variants={sectionVariants}
+          initial="hidden"
+          animate="visible"
+          aria-label="Team Values"
+        >
+          <h2>Team Values</h2>
+          <ul>
+            <li><strong>Continuous Feedback Culture:</strong> Growth through feedback and collaboration</li>
+            <li><strong>Open Communication:</strong> Transparent and clear interactions</li>
+            <li><strong>Collaboration-Oriented:</strong> Works collectively toward goals</li>
+            <li><strong>Diversity & Inclusion:</strong> Values different perspectives for creativity</li>
+            <li><strong>Emotional Intelligence:</strong> Cultivates empathy, self-awareness, and strong interpersonal skills</li>
           </ul>
         </motion.section>
 
@@ -103,19 +145,16 @@ const Resume = () => {
           aria-label="Experience"
         >
           <h2>Experience</h2>
-
           <p><strong>Strathmore University / Nairobi DevOps Community</strong> – DevOps & Cloud Native Training <em>(Apr 2025 – Jul 2025)</em></p>
           <ul>
             <li>Undergoing intensive DevOps training covering CI/CD, Docker, Terraform, Jenkins, and Kubernetes.</li>
             <li>Gained hands-on experience with AWS services including EC2, IAM, Lambda, and Elastic Beanstalk.</li>
             <li>Developed automation skills using Bash scripting and infrastructure-as-code principles.</li>
           </ul>
-
-          <p><strong>freeCodeCamp</strong> – Self-Directed Learning <em>(Mar 2025 – Present)</em></p>
+          <p><strong>FreeCodeCamp</strong> – Self-Directed Learning <em>(Mar 2025 – Present)</em></p>
           <ul>
-            <li>Completed full stack projects and certifications in Frontend Libraries, JavaScript Algorithms, and APIs.</li>
+            <li>Completed full-stack projects and certifications in Frontend Libraries, JavaScript Algorithms, and APIs.</li>
           </ul>
-
           <p><strong>Moringa School</strong> – Software Engineering Student <em>(Sep 2024 – Mar 2025)</em></p>
           <ul>
             <li>Hands-on training in React, Flask, and PostgreSQL through project-based learning and peer collaboration.</li>

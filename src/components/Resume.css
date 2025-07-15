@@ -128,32 +128,90 @@
 .back-link a:hover {
   text-decoration: underline;
 }
+
+/* Enhanced PDF-specific styles */
 .pdf-content {
-  margin: 0;
-  padding: 0;
-  line-height: 1.2;
-  font-size: 12px; 
+  margin: 0 !important;
+  padding: 0.1in !important;
+  font-size: 11px !important;
+  line-height: 1.15 !important;
+  background: #fff !important; /* Ensure consistent background */
+  box-shadow: none !important;
 }
+
+.pdf-content .resume-section {
+  margin-bottom: 0.3in !important;
+  padding: 0.2in !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
 .pdf-content h1, .pdf-content h2, .pdf-content h3 {
-  margin: 0.2in 0; 
+  margin: 0.1in 0 !important;
+  font-size: 14px !important; /* Smaller headings for PDF */
 }
+
 .pdf-content p, .pdf-content ul {
-  margin: 0.1in 0; 
+  margin: 0.05in 0 !important;
+  padding-left: 0.2in !important;
+}
+
+.pdf-content ul li {
+  margin-bottom: 0.05in !important;
+}
+
+.pdf-content * {
+  transform: none !important;
+  transition: none !important; /* Disable Framer Motion animations */
+  color: #000 !important; /* Ensure readability in PDF */
+}
+
+/* Print-specific styles for better PDF rendering */
+@media print {
+  .resume {
+    padding: 0.2in;
+    background: #fff;
+  }
+  .resume-container {
+    margin: 0;
+    padding: 0.2in;
+  }
+  .resume-content {
+    font-size: 11px;
+    line-height: 1.15;
+  }
+  .resume-section {
+    margin-bottom: 0.3in;
+    padding: 0.2in;
+    background: none;
+    box-shadow: none;
+  }
+  .resume-section h2 {
+    margin-bottom: 0.1in;
+    font-size: 14px;
+  }
+  .resume-section p, .resume-section ul {
+    margin: 0.05in 0;
+    padding-left: 0.2in;
+  }
+  .resume-section ul li {
+    margin-bottom: 0.05in;
+  }
+  .download-section, .back-link {
+    display: none; /* Hide buttons in PDF */
+  }
 }
 
 @media (max-width: 768px) {
   .resume {
     padding: 1.5rem;
   }
-
   .resume header h1 {
     font-size: 2rem;
   }
-
   .resume-section {
     padding: 1rem;
   }
-
   .resume-section h2 {
     font-size: 1.5rem;
   }
