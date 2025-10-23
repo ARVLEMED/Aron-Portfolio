@@ -44,10 +44,10 @@ const Resume = () => {
       >
         <h1>Aron Kipkorir</h1>
         <p>Software Engineer | Full Stack Developer | Healthcare Innovator</p>
-       
       </motion.header>
 
       <div ref={resumeRef} className="resume-content">
+        {/* ===== Professional Summary ===== */}
         <motion.section
           className="resume-section"
           variants={sectionVariants}
@@ -57,10 +57,20 @@ const Resume = () => {
         >
           <h2>Professional Summary</h2>
           <p>
-            As a dynamic Software Engineer with a unique blend of healthcare expertise and technical proficiency, I specialize in crafting scalable, user-centric web applications using Python (Flask), JavaScript (React), and full-stack technologies. Transitioning from a Registered Nurse (BSc. Nursing, Daystar University), I bring a deep understanding of healthcare workflows to deliver impactful solutions. My hands-on experience includes building responsive web applications, RESTful APIs, and database-driven systems with PostgreSQL, SQLAlchemy, Docker, and Git. Currently advancing my expertise through intensive DevOps and Cloud Native training at Strathmore University, I am proficient in CI/CD pipelines, AWS services (EC2, IAM, Lambda, Elastic Beanstalk), and infrastructure-as-code with Terraform and Kubernetes. Through self-directed learning at FreeCodeCamp, I’ve honed skills in frontend libraries, APIs, and algorithms, complemented by project-based training at Moringa School. Passionate about automation and collaboration, I thrive in fast-paced environments, delivering innovative software solutions that bridge technology and real-world needs.
+            As a dynamic Software Engineer with a unique blend of healthcare expertise and technical proficiency, 
+            I specialize in crafting scalable, user-centric web applications using Python (Flask), JavaScript (React), 
+            and full-stack technologies. Transitioning from a Registered Nurse (BSc. Nursing, Daystar University), 
+            I bring a deep understanding of healthcare workflows to deliver impactful solutions. My hands-on experience 
+            includes building responsive web applications, RESTful APIs, and database-driven systems with PostgreSQL, 
+            SQLAlchemy, Docker, and Git. I have advanced my expertise through DevOps and Cloud Native training at 
+            Strathmore University and recently completed the Artificial Intelligence Launchpad at Moringa School, 
+            gaining experience with AI fundamentals, TensorFlow, PyTorch, and Scikit-learn. Passionate about automation, 
+            data-driven development, and collaboration, I thrive in fast-paced environments delivering innovative software 
+            solutions that bridge technology and real-world needs.
           </p>
         </motion.section>
 
+        {/* ===== Technical Skills ===== */}
         <motion.section
           className="resume-section"
           variants={sectionVariants}
@@ -70,15 +80,25 @@ const Resume = () => {
         >
           <h2>Technical Skills</h2>
           <ul>
-            <li><strong>Languages:</strong> JavaScript, Python, Bash</li>
-            <li><strong>Frontend:</strong> HTML, CSS, React</li>
+            <li><strong>Languages:</strong> JavaScript, Python, SQL, Bash</li>
+            <li><strong>Frontend:</strong> HTML, CSS, React, Redux, Bootstrap</li>
             <li><strong>Backend:</strong> Flask, SQLAlchemy, REST APIs, PostgreSQL, SQLite</li>
-            <li><strong>DevOps & Cloud:</strong> Docker, Kubernetes, Jenkins, Terraform, CI/CD, AWS (EC2, IAM, Lambda, Elastic Beanstalk)</li>
-            <li><strong>Tools:</strong> Git, GitHub, Netlify, Render</li>
-            <li><strong>Practices:</strong> Agile, Scrum, Linux, Bash Scripting, CRUD Operations</li>
+            <li>
+              <strong>Artificial Intelligence & Machine Learning:</strong> 
+              TensorFlow, PyTorch, Scikit-learn, Deep Learning, 
+              Natural Language Processing (NLP), AI Ethics, Responsible AI Practices
+            </li>
+            <li><strong>DevOps & Cloud:</strong> Docker, Kubernetes, Jenkins, Terraform, CI/CD Pipelines, 
+              AWS (EC2, IAM, Lambda, Elastic Beanstalk), Infrastructure as Code, Linux Server Administration
+            </li>
+            <li><strong>Tools & Platforms:</strong> Git, GitHub, Postman, Netlify, Render, Visual Studio Code</li>
+            <li><strong>Development Practices:</strong> Agile & Scrum, Test-Driven Development (TDD), 
+              API Design, CRUD Operations, Continuous Integration
+            </li>
           </ul>
         </motion.section>
 
+        {/* ===== Projects ===== */}
         <motion.section
           className="resume-section"
           variants={sectionVariants}
@@ -102,6 +122,7 @@ const Resume = () => {
           </ul>
         </motion.section>
 
+        {/* ===== Soft Skills ===== */}
         <motion.section
           className="resume-section"
           variants={sectionVariants}
@@ -120,6 +141,7 @@ const Resume = () => {
           </ul>
         </motion.section>
 
+        {/* ===== Team Values ===== */}
         <motion.section
           className="resume-section"
           variants={sectionVariants}
@@ -137,6 +159,7 @@ const Resume = () => {
           </ul>
         </motion.section>
 
+        {/* ===== Experience ===== */}
         <motion.section
           className="resume-section"
           variants={sectionVariants}
@@ -151,9 +174,14 @@ const Resume = () => {
             <li>Gained hands-on experience with AWS services including EC2, IAM, Lambda, and Elastic Beanstalk.</li>
             <li>Developed automation skills using Bash scripting and infrastructure-as-code principles.</li>
           </ul>
+          <p><strong>Moringa School</strong> – Artificial Intelligence Launchpad <em>(Sep 2025)</em></p>
+          <ul>
+            <li>Completed hands-on training in Machine Learning, Deep Learning, NLP, and AI Tools (TensorFlow, PyTorch, Scikit-learn).</li>
+            <li>Gained understanding of AI ethics and responsible AI practices.</li>
+          </ul>
           <p><strong>FreeCodeCamp</strong> – Self-Directed Learning <em>(Mar 2025 – Present)</em></p>
           <ul>
-            <li>Completed full-stack projects and certifications in Frontend Libraries, JavaScript Algorithms, and APIs.</li>
+            <li>Completed full-stack certifications in Frontend Libraries, JavaScript Algorithms, and Data Visualization.</li>
           </ul>
           <p><strong>Moringa School</strong> – Software Engineering Student <em>(Sep 2024 – Mar 2025)</em></p>
           <ul>
@@ -161,6 +189,7 @@ const Resume = () => {
           </ul>
         </motion.section>
 
+        {/* ===== Education ===== */}
         <motion.section
           className="resume-section"
           variants={sectionVariants}
@@ -170,6 +199,7 @@ const Resume = () => {
         >
           <h2>Education</h2>
           <ul>
+            <li><strong>Moringa School</strong> – Artificial Intelligence Launchpad <em>(Sep 2025)</em></li>
             <li><strong>Moringa School</strong> – Full Stack Web Development <em>(Sep 2024 – Mar 2025)</em></li>
             <li><strong>Daystar University</strong> – BSc. Nursing <em>(Aug 2019 – Nov 2023)</em></li>
             <li><strong>Strathmore University</strong> – DevOps Certificate <em>(Apr 2025 – Jul 2025)</em></li>
@@ -177,6 +207,7 @@ const Resume = () => {
         </motion.section>
       </div>
 
+      {/* ===== Download Button ===== */}
       <motion.div
         className="download-section"
         variants={sectionVariants}
@@ -188,6 +219,7 @@ const Resume = () => {
         </button>
       </motion.div>
 
+      {/* ===== Back to Home ===== */}
       <motion.div
         className="back-link"
         variants={sectionVariants}
