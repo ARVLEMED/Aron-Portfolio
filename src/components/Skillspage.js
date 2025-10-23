@@ -35,6 +35,20 @@ const SkillsPage = () => {
             </ul>
           </section>
 
+          {/* 🧠 New AI & ML Section */}
+          <section className="skills-category">
+            <h2>Artificial Intelligence & Machine Learning</h2>
+            <ul>
+              <li>Machine Learning</li>
+              <li>Deep Learning</li>
+              <li>Natural Language Processing (NLP)</li>
+              <li>TensorFlow</li>
+              <li>PyTorch</li>
+              <li>Scikit-learn</li>
+              <li>AI Ethics and Responsible AI Practices</li>
+            </ul>
+          </section>
+
           <section className="skills-category">
             <h2>DevOps & Cloud</h2>
             <ul>
