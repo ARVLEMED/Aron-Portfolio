@@ -2,8 +2,9 @@ import React, { useContext, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ThemeContext } from '../App';
-import './Resume.css';
 import html2pdf from 'html2pdf.js';
+import projects from '../data/ProjectsData';
+import './Resume.css';
 
 const Resume = () => {
   const { darkMode } = useContext(ThemeContext);
@@ -53,7 +54,6 @@ const Resume = () => {
           variants={sectionVariants}
           initial="hidden"
           animate="visible"
-          aria-label="Professional Summary"
         >
           <h2>Professional Summary</h2>
           <p>
@@ -76,51 +76,55 @@ const Resume = () => {
           variants={sectionVariants}
           initial="hidden"
           animate="visible"
-          aria-label="Technical Skills"
         >
           <h2>Technical Skills</h2>
           <ul>
             <li><strong>Languages:</strong> JavaScript, Python, SQL, Bash</li>
-            <li><strong>Frontend:</strong> HTML, CSS, React, Redux, Bootstrap</li>
+            <li><strong>Frontend:</strong> HTML, CSS, React, Redux, Tailwind CSS, Bootstrap</li>
             <li><strong>Backend:</strong> Flask, SQLAlchemy, REST APIs, PostgreSQL, SQLite</li>
             <li>
               <strong>Artificial Intelligence & Machine Learning:</strong> 
               TensorFlow, PyTorch, Scikit-learn, Deep Learning, 
-              Natural Language Processing (NLP), AI Ethics, Responsible AI Practices
+              Natural Language Processing (NLP), AI Ethics, Responsible AI
             </li>
-            <li><strong>DevOps & Cloud:</strong> Docker, Kubernetes, Jenkins, Terraform, CI/CD Pipelines, 
-              AWS (EC2, IAM, Lambda, Elastic Beanstalk), Infrastructure as Code, Linux Server Administration
+            <li>
+              <strong>DevOps & Cloud:</strong> Docker, Kubernetes, Jenkins, Terraform, CI/CD Pipelines, 
+              AWS (EC2, IAM, Lambda, Elastic Beanstalk), Linux Server Administration
             </li>
-            <li><strong>Tools & Platforms:</strong> Git, GitHub, Postman, Netlify, Render, Visual Studio Code</li>
-            <li><strong>Development Practices:</strong> Agile & Scrum, Test-Driven Development (TDD), 
-              API Design, CRUD Operations, Continuous Integration
-            </li>
+            <li><strong>Tools & Platforms:</strong> Git, GitHub, Postman, Netlify, Render, VS Code</li>
+            <li><strong>Development Practices:</strong> Agile, Scrum, TDD, API Design, CI/CD</li>
           </ul>
         </motion.section>
 
         {/* ===== Projects ===== */}
-        <motion.section
-          className="resume-section"
-          variants={sectionVariants}
-          initial="hidden"
-          animate="visible"
-          aria-label="Projects"
-        >
-          <h2>Projects</h2>
-          <p><strong>Health Awareness App</strong> – React, Flask, PostgreSQL, JWT</p>
-          <ul>
-            <li>Built a full-stack health awareness app integrating React (frontend) and Flask (backend).</li>
-            <li>Developed REST APIs for handling medical data and user authentication (JWT Authentication).</li>
-            <li>Designed and managed a PostgreSQL database for storing medical information securely.</li>
-            <li>Applied Agile methodologies for iterative development and continuous improvements.</li>
-          </ul>
-          <p><strong>Tasklister App</strong> – JavaScript, HTML, CSS, CRUD Operations</p>
-          <ul>
-            <li>Created a task management application allowing users to add and delete tasks.</li>
-            <li>Applied CRUD principles to efficiently handle user interactions and task persistence.</li>
-            <li>More projects available on <a href="https://github.com/ARVLEMED">GitHub</a>.</li>
-          </ul>
-        </motion.section>
+<motion.section
+  className="resume-section"
+  variants={sectionVariants}
+  initial="hidden"
+  animate="visible"
+>
+  <h2>Projects</h2>
+  <ul className="resume-projects">
+    {projects.slice(0, 6).map((project, index) => (
+      <li key={index} className="resume-project-item">
+        <strong>{project.name}</strong> — {project.technologies.join(', ')}
+        <p>{project.description}</p>
+      </li>
+    ))}
+  </ul>
+  <p>
+  View all projects on{' '}
+  <a
+    href="https://github.com/ARVLEMED"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    GitHub
+  </a>.
+</p>
+
+</motion.section>
+
 
         {/* ===== Soft Skills ===== */}
         <motion.section
@@ -128,7 +132,6 @@ const Resume = () => {
           variants={sectionVariants}
           initial="hidden"
           animate="visible"
-          aria-label="Soft Skills"
         >
           <h2>Soft Skills</h2>
           <ul>
@@ -136,27 +139,9 @@ const Resume = () => {
             <li>Effective communication and collaboration in Agile teams</li>
             <li>Leadership and ownership of end-to-end software projects</li>
             <li>User-focused design and human-centered thinking</li>
-            <li>Empathy, emotional intelligence, and a feedback-driven mindset</li>
-            <li>Entrepreneurial mindset for identifying innovative opportunities</li>
+            <li>Empathy and feedback-driven mindset</li>
           </ul>
-        </motion.section>
-
-        {/* ===== Team Values ===== */}
-        <motion.section
-          className="resume-section"
-          variants={sectionVariants}
-          initial="hidden"
-          animate="visible"
-          aria-label="Team Values"
-        >
-          <h2>Team Values</h2>
-          <ul>
-            <li><strong>Continuous Feedback Culture:</strong> Growth through feedback and collaboration</li>
-            <li><strong>Open Communication:</strong> Transparent and clear interactions</li>
-            <li><strong>Collaboration-Oriented:</strong> Works collectively toward goals</li>
-            <li><strong>Diversity & Inclusion:</strong> Values different perspectives for creativity</li>
-            <li><strong>Emotional Intelligence:</strong> Cultivates empathy, self-awareness, and strong interpersonal skills</li>
-          </ul>
+          
         </motion.section>
 
         {/* ===== Experience ===== */}
@@ -165,27 +150,24 @@ const Resume = () => {
           variants={sectionVariants}
           initial="hidden"
           animate="visible"
-          aria-label="Experience"
         >
           <h2>Experience</h2>
           <p><strong>Strathmore University / Nairobi DevOps Community</strong> – DevOps & Cloud Native Training <em>(Apr 2025 – Jul 2025)</em></p>
           <ul>
-            <li>Undergoing intensive DevOps training covering CI/CD, Docker, Terraform, Jenkins, and Kubernetes.</li>
-            <li>Gained hands-on experience with AWS services including EC2, IAM, Lambda, and Elastic Beanstalk.</li>
-            <li>Developed automation skills using Bash scripting and infrastructure-as-code principles.</li>
+            <li>Hands-on DevOps training covering CI/CD, Docker, Terraform, Jenkins, and Kubernetes.</li>
+            <li>Worked with AWS services (EC2, IAM, Lambda, Elastic Beanstalk) and Infrastructure as Code.</li>
           </ul>
           <p><strong>Moringa School</strong> – Artificial Intelligence Launchpad <em>(Sep 2025)</em></p>
           <ul>
-            <li>Completed hands-on training in Machine Learning, Deep Learning, NLP, and AI Tools (TensorFlow, PyTorch, Scikit-learn).</li>
-            <li>Gained understanding of AI ethics and responsible AI practices.</li>
+            <li>Completed training in ML, DL, and NLP with TensorFlow, PyTorch, and Scikit-learn.</li>
           </ul>
           <p><strong>FreeCodeCamp</strong> – Self-Directed Learning <em>(Mar 2025 – Present)</em></p>
           <ul>
-            <li>Completed full-stack certifications in Frontend Libraries, JavaScript Algorithms, and Data Visualization.</li>
+            <li>Completed certifications in Frontend Libraries, JavaScript Algorithms, and Data Visualization.</li>
           </ul>
           <p><strong>Moringa School</strong> – Software Engineering Student <em>(Sep 2024 – Mar 2025)</em></p>
           <ul>
-            <li>Hands-on training in React, Flask, and PostgreSQL through project-based learning and peer collaboration.</li>
+            <li>Built full-stack apps using React, Flask, and PostgreSQL via project-based learning.</li>
           </ul>
         </motion.section>
 
@@ -195,14 +177,13 @@ const Resume = () => {
           variants={sectionVariants}
           initial="hidden"
           animate="visible"
-          aria-label="Education"
         >
           <h2>Education</h2>
           <ul>
             <li><strong>Moringa School</strong> – Artificial Intelligence Launchpad <em>(Sep 2025)</em></li>
             <li><strong>Moringa School</strong> – Full Stack Web Development <em>(Sep 2024 – Mar 2025)</em></li>
-            <li><strong>Daystar University</strong> – BSc. Nursing <em>(Aug 2019 – Nov 2023)</em></li>
             <li><strong>Strathmore University</strong> – DevOps Certificate <em>(Apr 2025 – Jul 2025)</em></li>
+            <li><strong>Daystar University</strong> – BSc. Nursing <em>(Aug 2019 – Nov 2023)</em></li>
           </ul>
         </motion.section>
       </div>
@@ -214,7 +195,7 @@ const Resume = () => {
         initial="hidden"
         animate="visible"
       >
-        <button onClick={handleDownloadPDF} className="download-btn" aria-label="Download resume as PDF">
+        <button onClick={handleDownloadPDF} className="download-btn">
           Download Resume (PDF)
         </button>
       </motion.div>
@@ -226,7 +207,7 @@ const Resume = () => {
         initial="hidden"
         animate="visible"
       >
-        <Link to="/" aria-label="Back to home">Back to Home</Link>
+        <Link to="/">Back to Home</Link>
       </motion.div>
     </div>
   );
