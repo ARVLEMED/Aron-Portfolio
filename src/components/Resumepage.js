@@ -57,16 +57,14 @@ const Resume = () => {
         >
           <h2>Professional Summary</h2>
           <p>
-            As a dynamic Software Engineer with a unique blend of healthcare expertise and technical proficiency, 
-            I specialize in crafting scalable, user-centric web applications using Python (Flask), JavaScript (React), 
-            and full-stack technologies. Transitioning from a Registered Nurse (BSc. Nursing, Daystar University), 
-            I bring a deep understanding of healthcare workflows to deliver impactful solutions. My hands-on experience 
-            includes building responsive web applications, RESTful APIs, and database-driven systems with PostgreSQL, 
-            SQLAlchemy, Docker, and Git. I have advanced my expertise through DevOps and Cloud Native training at 
-            Strathmore University and recently completed the Artificial Intelligence Launchpad at Moringa School, 
-            gaining experience with AI fundamentals, TensorFlow, PyTorch, and Scikit-learn. Passionate about automation, 
-            data-driven development, and collaboration, I thrive in fast-paced environments delivering innovative software 
-            solutions that bridge technology and real-world needs.
+            As a dynamic Software Engineer with a blend of healthcare expertise and strong technical acumen, 
+            I specialize in developing secure, scalable, and user-centric web applications using Python (Flask), 
+            JavaScript (React), and cloud-native technologies. Transitioning from a Registered Nurse (BSc. Nursing, Daystar University), 
+            I bring a unique understanding of healthcare systems, security, and data integrity. 
+            My hands-on experience spans full-stack development, RESTful APIs, and containerized deployments using Docker and Kubernetes. 
+            Recently, I expanded my skill set through Coursera’s <em>Application Security for Developers and DevOps Professionals</em> course, 
+            gaining practical knowledge in secure coding, vulnerability scanning, OWASP standards, and threat modeling. 
+            I am passionate about DevSecOps, automation, and data-driven development—building technology that enhances both security and impact.
           </p>
         </motion.section>
 
@@ -83,6 +81,13 @@ const Resume = () => {
             <li><strong>Frontend:</strong> HTML, CSS, React, Redux, Tailwind CSS, Bootstrap</li>
             <li><strong>Backend:</strong> Flask, SQLAlchemy, REST APIs, PostgreSQL, SQLite</li>
             <li>
+              <strong>Application Security & DevSecOps:</strong> 
+              Secure Coding, Vulnerability Scanning, Threat Modeling, 
+              Security Testing, Continuous Monitoring, Data Security, 
+              OWASP Top 10, Vulnerability Assessments, SDLC Security, 
+              Development Environment Hardening
+            </li>
+            <li>
               <strong>Artificial Intelligence & Machine Learning:</strong> 
               TensorFlow, PyTorch, Scikit-learn, Deep Learning, 
               Natural Language Processing (NLP), AI Ethics, Responsible AI
@@ -97,34 +102,32 @@ const Resume = () => {
         </motion.section>
 
         {/* ===== Projects ===== */}
-<motion.section
-  className="resume-section"
-  variants={sectionVariants}
-  initial="hidden"
-  animate="visible"
->
-  <h2>Projects</h2>
-  <ul className="resume-projects">
-    {projects.slice(0, 6).map((project, index) => (
-      <li key={index} className="resume-project-item">
-        <strong>{project.name}</strong> — {project.technologies.join(', ')}
-        <p>{project.description}</p>
-      </li>
-    ))}
-  </ul>
-  <p>
-  View all projects on{' '}
-  <a
-    href="https://github.com/ARVLEMED"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    GitHub
-  </a>.
-</p>
-
-</motion.section>
-
+        <motion.section
+          className="resume-section"
+          variants={sectionVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <h2>Projects</h2>
+          <ul className="resume-projects">
+            {projects.slice(0, 6).map((project, index) => (
+              <li key={index} className="resume-project-item">
+                <strong>{project.name}</strong> — {project.technologies.join(', ')}
+                <p>{project.description}</p>
+              </li>
+            ))}
+          </ul>
+          <p>
+            View all projects on{' '}
+            <a
+              href="https://github.com/ARVLEMED"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>.
+          </p>
+        </motion.section>
 
         {/* ===== Soft Skills ===== */}
         <motion.section
@@ -141,7 +144,6 @@ const Resume = () => {
             <li>User-focused design and human-centered thinking</li>
             <li>Empathy and feedback-driven mindset</li>
           </ul>
-          
         </motion.section>
 
         {/* ===== Experience ===== */}
@@ -152,19 +154,29 @@ const Resume = () => {
           animate="visible"
         >
           <h2>Experience</h2>
+
+          <p><strong>Coursera</strong> – Application Security for Developers and DevOps Professionals <em>(Nov 2025)</em></p>
+          <ul>
+            <li>Completed comprehensive training on secure coding, vulnerability scanning, OWASP standards, and threat modeling.</li>
+            <li>Gained practical skills in continuous monitoring, vulnerability assessment, and secure software development lifecycle (SDLC).</li>
+          </ul>
+
           <p><strong>Strathmore University / Nairobi DevOps Community</strong> – DevOps & Cloud Native Training <em>(Apr 2025 – Jul 2025)</em></p>
           <ul>
             <li>Hands-on DevOps training covering CI/CD, Docker, Terraform, Jenkins, and Kubernetes.</li>
             <li>Worked with AWS services (EC2, IAM, Lambda, Elastic Beanstalk) and Infrastructure as Code.</li>
           </ul>
+
           <p><strong>Moringa School</strong> – Artificial Intelligence Launchpad <em>(Sep 2025)</em></p>
           <ul>
             <li>Completed training in ML, DL, and NLP with TensorFlow, PyTorch, and Scikit-learn.</li>
           </ul>
+
           <p><strong>FreeCodeCamp</strong> – Self-Directed Learning <em>(Mar 2025 – Present)</em></p>
           <ul>
             <li>Completed certifications in Frontend Libraries, JavaScript Algorithms, and Data Visualization.</li>
           </ul>
+
           <p><strong>Moringa School</strong> – Software Engineering Student <em>(Sep 2024 – Mar 2025)</em></p>
           <ul>
             <li>Built full-stack apps using React, Flask, and PostgreSQL via project-based learning.</li>
@@ -180,6 +192,7 @@ const Resume = () => {
         >
           <h2>Education</h2>
           <ul>
+            <li><strong>Coursera</strong> – Application Security for Developers and DevOps Professionals <em>(Nov 2025)</em></li>
             <li><strong>Moringa School</strong> – Artificial Intelligence Launchpad <em>(Sep 2025)</em></li>
             <li><strong>Moringa School</strong> – Full Stack Web Development <em>(Sep 2024 – Mar 2025)</em></li>
             <li><strong>Strathmore University</strong> – DevOps Certificate <em>(Apr 2025 – Jul 2025)</em></li>

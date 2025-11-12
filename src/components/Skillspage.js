@@ -35,7 +35,7 @@ const SkillsPage = () => {
             </ul>
           </section>
 
-          {/* 🧠 New AI & ML Section */}
+          {/* 🧠 AI & ML Section */}
           <section className="skills-category">
             <h2>Artificial Intelligence & Machine Learning</h2>
             <ul>
@@ -78,6 +78,24 @@ const SkillsPage = () => {
               <li>Netlify</li>
               <li>Visual Studio Code</li>
               <li>Postman</li>
+            </ul>
+          </section>
+
+          {/* 🛡️ Application Security Section */}
+          <section className="skills-category">
+            <h2>Application Security</h2>
+            <ul>
+              <li>Secure Coding Practices</li>
+              <li>Vulnerability Assessments</li>
+              <li>Vulnerability Scanning</li>
+              <li>Threat Modeling</li>
+              <li>Security Testing</li>
+              <li>Continuous Monitoring</li>
+              <li>Data Security</li>
+              <li>Application Performance Management</li>
+              <li>Open Web Application Security Project (OWASP)</li>
+              <li>Software Development Life Cycle (SDLC) Security</li>
+              <li>Development Environment Hardening</li>
             </ul>
           </section>
 

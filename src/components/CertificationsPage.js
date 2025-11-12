@@ -6,11 +6,12 @@ import './Certifications.css';
 const certifications = [
   {
     id: 1,
-    title: 'Full Stack Web Development',
-    issuer: 'Moringa School',
-    date: 'March 2025',
-    description: 'Completed intensive training in HTML, CSS, JavaScript, React, Flask, and backend technologies.',
-    link: '/Certificates/aron_kipkorir_moringa_software_engineering_cert.png', 
+    title: 'Application Security for Developers and DevOps Professionals',
+    issuer: 'Coursera',
+    date: 'November 2025',
+    description:
+      'Successfully completed the Application Security for Developers and DevOps Professionals, covering Secure Coding Practices,Vulnerability Assessments,Vulnerability Scanning,Threat Modeling,Security Testing,Continuous Monitoring,Data Security,Application Performance Management,Open Web Application Security Project (OWASP),Software Development Life Cycle (SDLC) Security and Development Environment Hardening',
+    link: 'https://www.coursera.org/account/accomplishments/certificate/CFRX1AMXAZWE',
   },
   {
     id: 2,
@@ -23,19 +24,19 @@ const certifications = [
   },
   {
     id: 3,
-    title: 'Bachelor of Science in Nursing',
-    issuer: 'Daystar University',
-    date: 'November 2023',
-    description: 'Comprehensive Education in Nursing and Healthcare Practices.',
-    link: '/Certificates/Degree Certificate.pdf',
-  },
-  {
-    id: 4,
     title: 'AWS Academy Graduate - AWS Academy Cloud Foundations',
     issuer: 'Amazon Web Services (AWS)',
     date: 'June 2025',
     description: 'Completed the AWS Cloud Foundation Course.',
     link: 'https://www.credly.com/badges/4f87d4a2-80d7-44fc-ae0a-8d04ad75b477/linked_in_profile',
+  },
+  {
+    id: 4,
+    title: 'Full Stack Web Development',
+    issuer: 'Moringa School',
+    date: 'March 2025',
+    description: 'Completed intensive training in HTML, CSS, JavaScript, React, Flask, and backend technologies.',
+    link: '/Certificates/aron_kipkorir_moringa_software_engineering_cert.png', 
   },
   {
     id: 5,
@@ -68,6 +69,14 @@ const certifications = [
     date: 'April 2025',
     description: 'Mastered skills in HTML and CSS.',
     link: 'https://www.freecodecamp.org/certification/fcc48dfc922-8d03-480b-a201-002e5d015f2b/responsive-web-design',
+  },
+  {
+    id: 9,
+    title: 'Bachelor of Science in Nursing',
+    issuer: 'Daystar University',
+    date: 'November 2023',
+    description: 'Comprehensive Education in Nursing and Healthcare Practices.',
+    link: '/Certificates/Degree Certificate.pdf',
   },
 ];
 
