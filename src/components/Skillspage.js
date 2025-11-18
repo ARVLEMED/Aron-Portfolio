@@ -24,6 +24,7 @@ const SkillsPage = () => {
               <li>React</li>
               <li>Flask</li>
               <li>HTML & CSS</li>
+              <li>REST APIs</li>
             </ul>
           </section>
 
@@ -35,14 +36,13 @@ const SkillsPage = () => {
             </ul>
           </section>
 
-          {/* 🧠 AI & ML Section */}
           <section className="skills-category">
             <h2>Artificial Intelligence & Machine Learning</h2>
             <ul>
               <li>Machine Learning</li>
               <li>Deep Learning</li>
               <li>Natural Language Processing (NLP)</li>
-              <li>TensorFlow</li>
+              <li>TutorialFlow</li>
               <li>PyTorch</li>
               <li>Scikit-learn</li>
               <li>AI Ethics and Responsible AI Practices</li>
@@ -57,6 +57,11 @@ const SkillsPage = () => {
               <li>Jenkins</li>
               <li>Terraform</li>
               <li>CI/CD Pipelines</li>
+              <li>Test-Driven Development (TDD)</li>
+              <li>Behavior-Driven Development (BDD)</li>
+              <li>Microservices</li>
+              <li>Cloud-Native Computing</li>
+              <li>Agile & DevOps Methodologies</li>
               <li>AWS EC2</li>
               <li>AWS IAM</li>
               <li>AWS Lambda</li>
@@ -76,12 +81,11 @@ const SkillsPage = () => {
               <li>GitHub</li>
               <li>Render</li>
               <li>Netlify</li>
-              <li>Visual Studio Code</li>
+              <li>VS Code</li>
               <li>Postman</li>
             </ul>
           </section>
 
-          {/* 🛡️ Application Security Section */}
           <section className="skills-category">
             <h2>Application Security</h2>
             <ul>
@@ -93,9 +97,26 @@ const SkillsPage = () => {
               <li>Continuous Monitoring</li>
               <li>Data Security</li>
               <li>Application Performance Management</li>
-              <li>Open Web Application Security Project (OWASP)</li>
-              <li>Software Development Life Cycle (SDLC) Security</li>
+              <li>OWASP Guidelines</li>
+              <li>SDLC Security</li>
               <li>Development Environment Hardening</li>
+            </ul>
+          </section>
+
+          <section className="skills-category">
+            <h2>Agile & Scrum</h2>
+            <ul>
+              <li>Agile Project Management</li>
+              <li>Scrum Framework</li>
+              <li>Kanban Principles</li>
+              <li>Sprint Planning</li>
+              <li>Sprint Retrospectives</li>
+              <li>Backlog Management</li>
+              <li>User Stories</li>
+              <li>Workflow Management</li>
+              <li>Continuous Improvement</li>
+              <li>Team Management & Collaboration</li>
+              <li>Performance Measurement</li>
             </ul>
           </section>
 

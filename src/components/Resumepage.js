@@ -48,6 +48,7 @@ const Resume = () => {
       </motion.header>
 
       <div ref={resumeRef} className="resume-content">
+
         {/* ===== Professional Summary ===== */}
         <motion.section
           className="resume-section"
@@ -57,14 +58,14 @@ const Resume = () => {
         >
           <h2>Professional Summary</h2>
           <p>
-            As a dynamic Software Engineer with a blend of healthcare expertise and strong technical acumen, 
-            I specialize in developing secure, scalable, and user-centric web applications using Python (Flask), 
-            JavaScript (React), and cloud-native technologies. Transitioning from a Registered Nurse (BSc. Nursing, Daystar University), 
-            I bring a unique understanding of healthcare systems, security, and data integrity. 
-            My hands-on experience spans full-stack development, RESTful APIs, and containerized deployments using Docker and Kubernetes. 
-            Recently, I expanded my skill set through Coursera’s <em>Application Security for Developers and DevOps Professionals</em> course, 
-            gaining practical knowledge in secure coding, vulnerability scanning, OWASP standards, and threat modeling. 
-            I am passionate about DevSecOps, automation, and data-driven development—building technology that enhances both security and impact.
+            As a dynamic Software Engineer with a blend of healthcare expertise and strong technical acumen,
+            I specialize in developing secure, scalable, and user-centric web applications using Python (Flask),
+            JavaScript (React), and cloud-native technologies. My expertise spans Agile & Scrum, DevOps,
+            containerization, CI/CD automation, REST API development, and secure software design.
+            I strengthened my engineering foundation through Coursera certifications in Agile & Scrum,
+            DevOps, and Application Security—earning hands-on skills in backlog management, sprint planning,
+            TDD, BDD, microservices, and cloud-native computing. I am passionate about DevSecOps,
+            continuous improvement, and building technology that optimizes performance, security, and impact.
           </p>
         </motion.section>
 
@@ -80,24 +81,36 @@ const Resume = () => {
             <li><strong>Languages:</strong> JavaScript, Python, SQL, Bash</li>
             <li><strong>Frontend:</strong> HTML, CSS, React, Redux, Tailwind CSS, Bootstrap</li>
             <li><strong>Backend:</strong> Flask, SQLAlchemy, REST APIs, PostgreSQL, SQLite</li>
+
             <li>
-              <strong>Application Security & DevSecOps:</strong> 
-              Secure Coding, Vulnerability Scanning, Threat Modeling, 
-              Security Testing, Continuous Monitoring, Data Security, 
-              OWASP Top 10, Vulnerability Assessments, SDLC Security, 
+              <strong>Application Security & DevSecOps:</strong>
+              Secure Coding, Vulnerability Scanning, Threat Modeling,
+              Security Testing, Continuous Monitoring, Data Security,
+              OWASP Top 10, SDLC Security, Vulnerability Assessments,
               Development Environment Hardening
             </li>
+
             <li>
-              <strong>Artificial Intelligence & Machine Learning:</strong> 
-              TensorFlow, PyTorch, Scikit-learn, Deep Learning, 
-              Natural Language Processing (NLP), AI Ethics, Responsible AI
+              <strong>AI & Machine Learning:</strong>
+              TensorFlow, PyTorch, Scikit-learn, Deep Learning, NLP,
+              AI Ethics, Responsible AI
             </li>
+
             <li>
-              <strong>DevOps & Cloud:</strong> Docker, Kubernetes, Jenkins, Terraform, CI/CD Pipelines, 
-              AWS (EC2, IAM, Lambda, Elastic Beanstalk), Linux Server Administration
+              <strong>DevOps & Cloud:</strong>
+              Docker, Kubernetes, Jenkins, Terraform, CI/CD Pipelines,
+              TDD, BDD, Microservices, Cloud-Native Computing,
+              AWS EC2, IAM, Lambda, Elastic Beanstalk,
+              Linux Server Administration
             </li>
+
             <li><strong>Tools & Platforms:</strong> Git, GitHub, Postman, Netlify, Render, VS Code</li>
-            <li><strong>Development Practices:</strong> Agile, Scrum, TDD, API Design, CI/CD</li>
+
+            <li>
+              <strong>Development Practices:</strong>
+              Agile, Scrum, Kanban, User Stories, Backlog Management,
+              Sprint Planning, Sprint Retrospectives, Continuous Improvement
+            </li>
           </ul>
         </motion.section>
 
@@ -155,31 +168,45 @@ const Resume = () => {
         >
           <h2>Experience</h2>
 
-          <p><strong>Coursera</strong> – Application Security for Developers and DevOps Professionals <em>(Nov 2025)</em></p>
+          <p><strong>Coursera</strong> – Introduction to Agile and Scrum <em>(Nov 2025)</em></p>
           <ul>
-            <li>Completed comprehensive training on secure coding, vulnerability scanning, OWASP standards, and threat modeling.</li>
-            <li>Gained practical skills in continuous monitoring, vulnerability assessment, and secure software development lifecycle (SDLC).</li>
+            <li>Gained skills in backlog management, user stories, sprint planning, and Agile workflows.</li>
+            <li>Applied Scrum principles including retrospectives, continuous improvement, and team collaboration.</li>
+            <li>Built competencies in Kanban, workflow optimization, and performance measurement.</li>
+          </ul>
+
+          <p><strong>Coursera</strong> – Introduction to DevOps <em>(Nov 2025)</em></p>
+          <ul>
+            <li>Built strong foundations in DevOps culture, automation, and cross-functional collaboration.</li>
+            <li>Learned CI/CD, cloud-native computing, microservices, accountability workflows, and delivery pipelines.</li>
+            <li>Practiced TDD, BDD, and performance metrics in modern DevOps environments.</li>
+          </ul>
+
+          <p><strong>Coursera</strong> – Application Security for Developers & DevOps Professionals <em>(Nov 2025)</em></p>
+          <ul>
+            <li>Completed training on secure coding, vulnerability scanning, OWASP standards, and threat modeling.</li>
+            <li>Gained hands-on skills in continuous monitoring and secure SDLC practices.</li>
           </ul>
 
           <p><strong>Strathmore University / Nairobi DevOps Community</strong> – DevOps & Cloud Native Training <em>(Apr 2025 – Jul 2025)</em></p>
           <ul>
-            <li>Hands-on DevOps training covering CI/CD, Docker, Terraform, Jenkins, and Kubernetes.</li>
-            <li>Worked with AWS services (EC2, IAM, Lambda, Elastic Beanstalk) and Infrastructure as Code.</li>
+            <li>Hands-on DevOps training with Docker, Jenkins, Kubernetes, Terraform, and CI/CD systems.</li>
+            <li>Worked with AWS services including EC2, IAM, Lambda, and Elastic Beanstalk.</li>
           </ul>
 
           <p><strong>Moringa School</strong> – Artificial Intelligence Launchpad <em>(Sep 2025)</em></p>
           <ul>
-            <li>Completed training in ML, DL, and NLP with TensorFlow, PyTorch, and Scikit-learn.</li>
+            <li>Completed training in ML, DL, NLP, and AI model development using TensorFlow and PyTorch.</li>
           </ul>
 
           <p><strong>FreeCodeCamp</strong> – Self-Directed Learning <em>(Mar 2025 – Present)</em></p>
           <ul>
-            <li>Completed certifications in Frontend Libraries, JavaScript Algorithms, and Data Visualization.</li>
+            <li>Completed certifications in Frontend Libraries, JavaScript Algorithms, Data Visualization, and more.</li>
           </ul>
 
           <p><strong>Moringa School</strong> – Software Engineering Student <em>(Sep 2024 – Mar 2025)</em></p>
           <ul>
-            <li>Built full-stack apps using React, Flask, and PostgreSQL via project-based learning.</li>
+            <li>Built full-stack applications using React, Flask, and PostgreSQL.</li>
           </ul>
         </motion.section>
 
@@ -192,7 +219,9 @@ const Resume = () => {
         >
           <h2>Education</h2>
           <ul>
-            <li><strong>Coursera</strong> – Application Security for Developers and DevOps Professionals <em>(Nov 2025)</em></li>
+            <li><strong>Coursera</strong> – Introduction to Agile and Scrum <em>(Nov 2025)</em></li>
+            <li><strong>Coursera</strong> – Introduction to DevOps <em>(Nov 2025)</em></li>
+            <li><strong>Coursera</strong> – Application Security for Developers & DevOps Professionals <em>(Nov 2025)</em></li>
             <li><strong>Moringa School</strong> – Artificial Intelligence Launchpad <em>(Sep 2025)</em></li>
             <li><strong>Moringa School</strong> – Full Stack Web Development <em>(Sep 2024 – Mar 2025)</em></li>
             <li><strong>Strathmore University</strong> – DevOps Certificate <em>(Apr 2025 – Jul 2025)</em></li>
@@ -201,7 +230,6 @@ const Resume = () => {
         </motion.section>
       </div>
 
-      {/* ===== Download Button ===== */}
       <motion.div
         className="download-section"
         variants={sectionVariants}
@@ -213,7 +241,6 @@ const Resume = () => {
         </button>
       </motion.div>
 
-      {/* ===== Back to Home ===== */}
       <motion.div
         className="back-link"
         variants={sectionVariants}
