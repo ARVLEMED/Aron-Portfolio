@@ -60,12 +60,14 @@ const Resume = () => {
           <p>
             As a dynamic Software Engineer with a blend of healthcare expertise and strong technical acumen,
             I specialize in developing secure, scalable, and user-centric web applications using Python (Flask),
-            JavaScript (React), and cloud-native technologies. My expertise spans Agile & Scrum, DevOps,
-            containerization, CI/CD automation, REST API development, and secure software design.
-            I strengthened my engineering foundation through Coursera certifications in Agile & Scrum,
-            DevOps, and Application Security—earning hands-on skills in backlog management, sprint planning,
-            TDD, BDD, microservices, and cloud-native computing. I am passionate about DevSecOps,
-            continuous improvement, and building technology that optimizes performance, security, and impact.
+            JavaScript (React), and cloud-native technologies. My clinical background in nursing provides unique 
+            insights into healthcare workflows, patient safety protocols, and empathetic user design—enabling me 
+            to build health-tech solutions that are not only technically robust but also clinically relevant and 
+            human-centered. My expertise spans Agile & Scrum, DevOps, containerization, CI/CD automation, REST API 
+            development, and secure software design. I strengthened my engineering foundation through Coursera 
+            certifications in Agile & Scrum, DevOps, and Application Security—earning hands-on skills in backlog 
+            management, sprint planning, TDD, BDD, microservices, and cloud-native computing. I am passionate about 
+            DevSecOps, continuous improvement, and building technology that optimizes performance, security, and impact.
           </p>
         </motion.section>
 
@@ -153,9 +155,15 @@ const Resume = () => {
           <ul>
             <li>Analytical and critical thinking in technical and clinical environments</li>
             <li>Effective communication and collaboration in Agile teams</li>
+            <li>Interpersonal communications and stakeholder management</li>
             <li>Leadership and ownership of end-to-end software projects</li>
             <li>User-focused design and human-centered thinking</li>
             <li>Empathy and feedback-driven mindset</li>
+            <li>Emotional intelligence in team dynamics and user experience design</li>
+            <li>Conflict management and constructive problem-solving</li>
+            <li>Time management and sprint planning</li>
+            <li>Relationship building with cross-functional teams</li>
+            <li>Patient-centered care principles applied to user experience</li>
           </ul>
         </motion.section>
 
@@ -222,6 +230,7 @@ const Resume = () => {
             <li><strong>Coursera</strong> – Introduction to Agile and Scrum <em>(Nov 2025)</em></li>
             <li><strong>Coursera</strong> – Introduction to DevOps <em>(Nov 2025)</em></li>
             <li><strong>Coursera</strong> – Application Security for Developers & DevOps Professionals <em>(Nov 2025)</em></li>
+            <li><strong>Medical Certification</strong> – Professionalism in Allied Health <em>(2025)</em></li>
             <li><strong>Moringa School</strong> – Artificial Intelligence Launchpad <em>(Sep 2025)</em></li>
             <li><strong>Moringa School</strong> – Full Stack Web Development <em>(Sep 2024 – Mar 2025)</em></li>
             <li><strong>Strathmore University</strong> – DevOps Certificate <em>(Apr 2025 – Jul 2025)</em></li>

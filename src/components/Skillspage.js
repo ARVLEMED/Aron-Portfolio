@@ -123,15 +123,17 @@ const SkillsPage = () => {
           <section className="skills-category">
             <h2>Soft Skills</h2>
             <ul>
-              <li>Analytical and Critical Thinking</li>
-              <li>Effective Communication</li>
-              <li>Creative Problem-Solving</li>
-              <li>Leadership and Self-Management</li>
-              <li>Project Management</li>
-              <li>Teamwork</li>
-              <li>Human-Centered Design</li>
-              <li>Empathy and Emotional Intelligence</li>
-              <li>Agile & Scrum Collaboration</li>
+              <li>Analytical and critical thinking in technical and clinical environments</li>
+            <li>Effective communication and collaboration in Agile teams</li>
+            <li>Interpersonal communications and stakeholder management</li>
+            <li>Leadership and ownership of end-to-end software projects</li>
+            <li>User-focused design and human-centered thinking</li>
+            <li>Empathy and feedback-driven mindset</li>
+            <li>Emotional intelligence in team dynamics and user experience design</li>
+            <li>Conflict management and constructive problem-solving</li>
+            <li>Time management and sprint planning</li>
+            <li>Relationship building with cross-functional teams</li>
+            <li>Patient-centered care principles applied to user experience</li>
             </ul>
           </section>
         </div>
