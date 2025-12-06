@@ -121,19 +121,34 @@ const SkillsPage = () => {
           </section>
 
           <section className="skills-category">
+            <h2>Health Informatics & Medical Coding</h2>
+            <ul>
+              <li>Electronic Medical Records (EMR) Systems</li>
+              <li>Medical Coding (ICD-10-CM, CPT, HCPCS)</li>
+              <li>Medical Terminology for Developers</li>
+              <li>Health Information Management</li>
+              <li>Healthcare Procedures & Regulations</li>
+              <li>Medical Billing Workflow Knowledge</li>
+              <li>Clinical Documentation Structure</li>
+              <li>Pathology, Anatomy & Physiology Knowledge</li>
+              <li>Ethical & Professional Conduct in Healthcare Tech</li>
+            </ul>
+          </section>
+
+          <section className="skills-category">
             <h2>Soft Skills</h2>
             <ul>
               <li>Analytical and critical thinking in technical and clinical environments</li>
-            <li>Effective communication and collaboration in Agile teams</li>
-            <li>Interpersonal communications and stakeholder management</li>
-            <li>Leadership and ownership of end-to-end software projects</li>
-            <li>User-focused design and human-centered thinking</li>
-            <li>Empathy and feedback-driven mindset</li>
-            <li>Emotional intelligence in team dynamics and user experience design</li>
-            <li>Conflict management and constructive problem-solving</li>
-            <li>Time management and sprint planning</li>
-            <li>Relationship building with cross-functional teams</li>
-            <li>Patient-centered care principles applied to user experience</li>
+              <li>Effective communication and collaboration in Agile teams</li>
+              <li>Interpersonal communications and stakeholder management</li>
+              <li>Leadership and ownership of end-to-end software projects</li>
+              <li>User-focused design and human-centered thinking</li>
+              <li>Empathy and feedback-driven mindset</li>
+              <li>Emotional intelligence in team dynamics and user experience design</li>
+              <li>Conflict management and constructive problem-solving</li>
+              <li>Time management and sprint planning</li>
+              <li>Relationship building with cross-functional teams</li>
+              <li>Patient-centered care principles applied to user experience</li>
             </ul>
           </section>
         </div>

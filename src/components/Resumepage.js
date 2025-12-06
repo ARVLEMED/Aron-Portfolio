@@ -21,6 +21,7 @@ const Resume = () => {
 
   const handleDownloadPDF = () => {
     const element = resumeRef.current;
+    if (!element) return;
     element.classList.add('pdf-content');
     html2pdf()
       .set({
@@ -38,11 +39,7 @@ const Resume = () => {
 
   return (
     <div className={`resume ${darkMode ? 'dark' : ''}`} aria-label="Resume page">
-      <motion.header
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-      >
+      <motion.header initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
         <h1>Aron Kipkorir</h1>
         <p>Software Engineer | Full Stack Developer | Healthcare Innovator</p>
       </motion.header>
@@ -50,39 +47,37 @@ const Resume = () => {
       <div ref={resumeRef} className="resume-content">
 
         {/* ===== Professional Summary ===== */}
-        <motion.section
-          className="resume-section"
-          variants={sectionVariants}
-          initial="hidden"
-          animate="visible"
-        >
+        <motion.section className="resume-section" variants={sectionVariants} initial="hidden" animate="visible">
           <h2>Professional Summary</h2>
           <p>
             As a dynamic Software Engineer with a blend of healthcare expertise and strong technical acumen,
             I specialize in developing secure, scalable, and user-centric web applications using Python (Flask),
-            JavaScript (React), and cloud-native technologies. My clinical background in nursing provides unique 
-            insights into healthcare workflows, patient safety protocols, and empathetic user design—enabling me 
-            to build health-tech solutions that are not only technically robust but also clinically relevant and 
-            human-centered. My expertise spans Agile & Scrum, DevOps, containerization, CI/CD automation, REST API 
-            development, and secure software design. I strengthened my engineering foundation through Coursera 
-            certifications in Agile & Scrum, DevOps, and Application Security—earning hands-on skills in backlog 
-            management, sprint planning, TDD, BDD, microservices, and cloud-native computing. I am passionate about 
+            JavaScript (React), and cloud-native technologies. My clinical background in nursing provides unique
+            insights into healthcare workflows, patient safety protocols, and empathetic user design—enabling me
+            to build health-tech solutions that are not only technically robust but also clinically relevant and
+            human-centered. My expertise spans Agile & Scrum, DevOps, containerization, CI/CD automation, REST API
+            development, and secure software design. I strengthened my engineering foundation through Coursera
+            certifications in Agile & Scrum, DevOps, and Application Security—earning hands-on skills in backlog
+            management, sprint planning, TDD, BDD, microservices, and cloud-native computing. I am passionate about
             DevSecOps, continuous improvement, and building technology that optimizes performance, security, and impact.
           </p>
         </motion.section>
 
         {/* ===== Technical Skills ===== */}
-        <motion.section
-          className="resume-section"
-          variants={sectionVariants}
-          initial="hidden"
-          animate="visible"
-        >
+        <motion.section className="resume-section" variants={sectionVariants} initial="hidden" animate="visible">
           <h2>Technical Skills</h2>
           <ul>
             <li><strong>Languages:</strong> JavaScript, Python, SQL, Bash</li>
             <li><strong>Frontend:</strong> HTML, CSS, React, Redux, Tailwind CSS, Bootstrap</li>
             <li><strong>Backend:</strong> Flask, SQLAlchemy, REST APIs, PostgreSQL, SQLite</li>
+
+            <li>
+              <strong>Health Informatics & Medical Coding:</strong>
+              Electronic Medical Records (EMR), ICD-10-CM, CPT/HCPCS, Clinical Documentation,
+              Medical Terminology, Healthcare Workflow Knowledge, Health Information Management,
+              Medical Billing Processes, Regulatory & Compliance Awareness (HIPAA principles),
+              Anatomy, Physiology & Pathology Knowledge
+            </li>
 
             <li>
               <strong>Application Security & DevSecOps:</strong>
@@ -117,12 +112,7 @@ const Resume = () => {
         </motion.section>
 
         {/* ===== Projects ===== */}
-        <motion.section
-          className="resume-section"
-          variants={sectionVariants}
-          initial="hidden"
-          animate="visible"
-        >
+        <motion.section className="resume-section" variants={sectionVariants} initial="hidden" animate="visible">
           <h2>Projects</h2>
           <ul className="resume-projects">
             {projects.slice(0, 6).map((project, index) => (
@@ -134,23 +124,12 @@ const Resume = () => {
           </ul>
           <p>
             View all projects on{' '}
-            <a
-              href="https://github.com/ARVLEMED"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-            </a>.
+            <a href="https://github.com/ARVLEMED" target="_blank" rel="noopener noreferrer">GitHub</a>.
           </p>
         </motion.section>
 
         {/* ===== Soft Skills ===== */}
-        <motion.section
-          className="resume-section"
-          variants={sectionVariants}
-          initial="hidden"
-          animate="visible"
-        >
+        <motion.section className="resume-section" variants={sectionVariants} initial="hidden" animate="visible">
           <h2>Soft Skills</h2>
           <ul>
             <li>Analytical and critical thinking in technical and clinical environments</li>
@@ -168,12 +147,7 @@ const Resume = () => {
         </motion.section>
 
         {/* ===== Experience ===== */}
-        <motion.section
-          className="resume-section"
-          variants={sectionVariants}
-          initial="hidden"
-          animate="visible"
-        >
+        <motion.section className="resume-section" variants={sectionVariants} initial="hidden" animate="visible">
           <h2>Experience</h2>
 
           <p><strong>Coursera</strong> – Introduction to Agile and Scrum <em>(Nov 2025)</em></p>
@@ -219,12 +193,7 @@ const Resume = () => {
         </motion.section>
 
         {/* ===== Education ===== */}
-        <motion.section
-          className="resume-section"
-          variants={sectionVariants}
-          initial="hidden"
-          animate="visible"
-        >
+        <motion.section className="resume-section" variants={sectionVariants} initial="hidden" animate="visible">
           <h2>Education</h2>
           <ul>
             <li><strong>Coursera</strong> – Introduction to Agile and Scrum <em>(Nov 2025)</em></li>
@@ -239,23 +208,11 @@ const Resume = () => {
         </motion.section>
       </div>
 
-      <motion.div
-        className="download-section"
-        variants={sectionVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        <button onClick={handleDownloadPDF} className="download-btn">
-          Download Resume (PDF)
-        </button>
+      <motion.div className="download-section" variants={sectionVariants} initial="hidden" animate="visible">
+        <button onClick={handleDownloadPDF} className="download-btn">Download Resume (PDF)</button>
       </motion.div>
 
-      <motion.div
-        className="back-link"
-        variants={sectionVariants}
-        initial="hidden"
-        animate="visible"
-      >
+      <motion.div className="back-link" variants={sectionVariants} initial="hidden" animate="visible">
         <Link to="/">Back to Home</Link>
       </motion.div>
     </div>
