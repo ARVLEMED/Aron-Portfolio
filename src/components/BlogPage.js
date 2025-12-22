@@ -5,7 +5,7 @@ import './Blog.css';
 
 const BlogPage = () => {
   const { darkMode } = useContext(ThemeContext);
-  const [view, setView] = useState('tech'); // 'tech' or 'healthcare'
+  const [view, setView] = useState('tech'); // 'tech' or 
 
   const techBlogs = [
     {
