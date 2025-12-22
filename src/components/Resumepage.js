@@ -50,17 +50,19 @@ const Resume = () => {
         <motion.section className="resume-section" variants={sectionVariants} initial="hidden" animate="visible">
           <h2>Professional Summary</h2>
           <p>
-            As a dynamic Software Engineer with a blend of healthcare expertise and strong technical acumen,
-            I specialize in developing secure, scalable, and user-centric web applications using Python (Flask),
-            JavaScript (React), and cloud-native technologies. My clinical background in nursing provides unique
-            insights into healthcare workflows, patient safety protocols, and empathetic user design—enabling me
-            to build health-tech solutions that are not only technically robust but also clinically relevant and
-            human-centered. My expertise spans Agile & Scrum, DevOps, containerization, CI/CD automation, REST API
-            development, and secure software design. I strengthened my engineering foundation through Coursera
-            certifications in Agile & Scrum, DevOps, and Application Security—earning hands-on skills in backlog
-            management, sprint planning, TDD, BDD, microservices, and cloud-native computing. I am passionate about
-            DevSecOps, continuous improvement, and building technology that optimizes performance, security, and impact.
-          </p>
+  As a dynamic Software Engineer with a strong foundation in Data Analytics and a clinical background in nursing,
+  I specialize in building secure, scalable, and data-driven web applications using Python (Flask), JavaScript (React),
+  SQL, and cloud-native technologies. I have hands-on experience in data analysis, statistical analysis, Excel-based
+  analytics, dashboards, and big data concepts using Apache Spark, Hadoop, and Hive.
+  <br /><br />
+  My healthcare background provides deep insight into clinical workflows, patient safety, and health information
+  management—allowing me to design analytics and health-tech solutions that are both technically robust and
+  clinically relevant. I am skilled in Agile & Scrum, DevOps, CI/CD automation, DevSecOps, REST API development,
+  and secure software design, with additional strengths in data visualization, dashboard storytelling, and
+  analytics reporting. I am passionate about leveraging data and technology to improve decision-making,
+  system performance, and real-world impact.
+</p>
+
         </motion.section>
 
         {/* ===== Technical Skills ===== */}
@@ -70,6 +72,27 @@ const Resume = () => {
             <li><strong>Languages:</strong> JavaScript, Python, SQL, Bash</li>
             <li><strong>Frontend:</strong> HTML, CSS, React, Redux, Tailwind CSS, Bootstrap</li>
             <li><strong>Backend:</strong> Flask, SQLAlchemy, REST APIs, PostgreSQL, SQLite</li>
+            <li>
+  <strong>Data Analytics & BI:</strong>
+  Data Analysis, Statistical Analysis, Exploratory Data Analysis (EDA),
+  Data Wrangling & Cleansing, Data Quality Management,
+  Analytics Reporting, Information Privacy
+</li>
+
+<li>
+  <strong>Data Visualization:</strong>
+  Excel Dashboards, IBM Cognos Analytics,
+  Pivot Tables & Charts, Tree Maps, Scatter Plots,
+  Histograms, Interactive Dashboards, Data Storytelling
+</li>
+
+<li>
+  <strong>Big Data Technologies:</strong>
+  Apache Hadoop, Apache Spark, Apache Hive,
+  Big Data Concepts, Distributed Data Processing,
+  Data Marts, Relational Databases
+</li>
+
 
             <li>
               <strong>Health Informatics & Medical Coding:</strong>
@@ -101,7 +124,12 @@ const Resume = () => {
               Linux Server Administration
             </li>
 
-            <li><strong>Tools & Platforms:</strong> Git, GitHub, Postman, Netlify, Render, VS Code</li>
+           <li>
+  <strong>Tools & Platforms:</strong>
+  Git, GitHub, Postman, Netlify, Render, VS Code,
+  Microsoft Excel, Google Sheets, IBM Cognos Analytics
+</li>
+
 
             <li>
               <strong>Development Practices:</strong>
@@ -149,6 +177,15 @@ const Resume = () => {
         {/* ===== Experience ===== */}
         <motion.section className="resume-section" variants={sectionVariants} initial="hidden" animate="visible">
           <h2>Experience</h2>
+          <p><strong>Coursera</strong> – Data Analytics & Visualization Training <em>(Dec 2025)</em></p>
+<ul>
+  <li>Completed hands-on training in data analytics, statistical analysis, and business intelligence workflows.</li>
+  <li>Built Excel-based analytical reports using pivot tables, formulas, data cleansing, and data manipulation.</li>
+  <li>Designed interactive dashboards and visualizations using Excel and IBM Cognos Analytics.</li>
+  <li>Worked with big data concepts and tools including Apache Hadoop, Spark, and Hive.</li>
+  <li>Applied data storytelling techniques to communicate insights clearly and effectively.</li>
+</ul>
+
 
           <p><strong>Coursera</strong> – Introduction to Agile and Scrum <em>(Nov 2025)</em></p>
           <ul>
@@ -196,6 +233,10 @@ const Resume = () => {
         <motion.section className="resume-section" variants={sectionVariants} initial="hidden" animate="visible">
           <h2>Education</h2>
           <ul>
+            <li><strong>Coursera</strong> – Introduction to Data Analytics <em>(Dec 2025)</em></li>
+<li><strong>Coursera</strong> – Excel Basics for Data Analysis <em>(Dec 2025)</em></li>
+<li><strong>Coursera</strong> – Data Visualization & Dashboards with Excel and Cognos <em>(Dec 2025)</em></li>
+
             <li><strong>Coursera</strong> – Introduction to Agile and Scrum <em>(Nov 2025)</em></li>
             <li><strong>Coursera</strong> – Introduction to DevOps <em>(Nov 2025)</em></li>
             <li><strong>Coursera</strong> – Application Security for Developers & DevOps Professionals <em>(Nov 2025)</em></li>

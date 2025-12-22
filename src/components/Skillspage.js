@@ -5,9 +5,11 @@ const SkillsPage = () => {
   return (
     <div className="skills-page">
       <h1>My Skills</h1>
+
       <div className="skills-container">
         {/* Left Side */}
         <div className="skills-left">
+
           <section className="skills-category">
             <h2>Programming Languages</h2>
             <ul>
@@ -33,6 +35,32 @@ const SkillsPage = () => {
             <ul>
               <li>PostgreSQL</li>
               <li>SQLite</li>
+              <li>Relational Databases</li>
+              <li>Data Marts</li>
+            </ul>
+          </section>
+
+          <section className="skills-category">
+            <h2>Data Analytics & Business Intelligence</h2>
+            <ul>
+              <li>Data Analysis & Interpretation</li>
+              <li>Statistical Analysis</li>
+              <li>Data Wrangling & Cleansing</li>
+              <li>Data Quality Management</li>
+              <li>Exploratory Data Analysis (EDA)</li>
+              <li>Analytics & Reporting</li>
+              <li>Information Privacy & Data Ethics</li>
+            </ul>
+          </section>
+
+          <section className="skills-category">
+            <h2>Big Data & Distributed Systems</h2>
+            <ul>
+              <li>Big Data Concepts</li>
+              <li>Apache Hadoop</li>
+              <li>Apache Spark</li>
+              <li>Apache Hive</li>
+              <li>Data Processing Pipelines</li>
             </ul>
           </section>
 
@@ -42,10 +70,40 @@ const SkillsPage = () => {
               <li>Machine Learning</li>
               <li>Deep Learning</li>
               <li>Natural Language Processing (NLP)</li>
-              <li>TutorialFlow</li>
               <li>PyTorch</li>
               <li>Scikit-learn</li>
-              <li>AI Ethics and Responsible AI Practices</li>
+              <li>AI Ethics & Responsible AI Practices</li>
+            </ul>
+          </section>
+
+        </div>
+
+        {/* Right Side */}
+        <div className="skills-right">
+
+          <section className="skills-category">
+            <h2>Data Visualization & Dashboards</h2>
+            <ul>
+              <li>Data Visualization Principles</li>
+              <li>Interactive Dashboards</li>
+              <li>IBM Cognos Analytics</li>
+              <li>Tree Maps</li>
+              <li>Scatter Plots</li>
+              <li>Histograms</li>
+              <li>Data Storytelling</li>
+              <li>Dashboard Design & Presentation</li>
+            </ul>
+          </section>
+
+          <section className="skills-category">
+            <h2>Excel & Spreadsheet Analytics</h2>
+            <ul>
+              <li>Microsoft Excel (Advanced)</li>
+              <li>Pivot Tables & Pivot Charts</li>
+              <li>Excel Formulas & Functions</li>
+              <li>Data Manipulation</li>
+              <li>Data Cleansing</li>
+              <li>Google Sheets</li>
             </ul>
           </section>
 
@@ -57,100 +115,37 @@ const SkillsPage = () => {
               <li>Jenkins</li>
               <li>Terraform</li>
               <li>CI/CD Pipelines</li>
-              <li>Test-Driven Development (TDD)</li>
-              <li>Behavior-Driven Development (BDD)</li>
-              <li>Microservices</li>
-              <li>Cloud-Native Computing</li>
-              <li>Agile & DevOps Methodologies</li>
-              <li>AWS EC2</li>
-              <li>AWS IAM</li>
-              <li>AWS Lambda</li>
-              <li>AWS Elastic Beanstalk</li>
-              <li>Infrastructure as Code</li>
+              <li>AWS (EC2, IAM, Lambda, Elastic Beanstalk)</li>
               <li>Linux Server Administration</li>
             </ul>
           </section>
-        </div>
 
-        {/* Right Side */}
-        <div className="skills-right">
           <section className="skills-category">
             <h2>Tools & Platforms</h2>
             <ul>
               <li>Git</li>
               <li>GitHub</li>
-              <li>Render</li>
-              <li>Netlify</li>
               <li>VS Code</li>
               <li>Postman</li>
-            </ul>
-          </section>
-
-          <section className="skills-category">
-            <h2>Application Security</h2>
-            <ul>
-              <li>Secure Coding Practices</li>
-              <li>Vulnerability Assessments</li>
-              <li>Vulnerability Scanning</li>
-              <li>Threat Modeling</li>
-              <li>Security Testing</li>
-              <li>Continuous Monitoring</li>
-              <li>Data Security</li>
-              <li>Application Performance Management</li>
-              <li>OWASP Guidelines</li>
-              <li>SDLC Security</li>
-              <li>Development Environment Hardening</li>
-            </ul>
-          </section>
-
-          <section className="skills-category">
-            <h2>Agile & Scrum</h2>
-            <ul>
-              <li>Agile Project Management</li>
-              <li>Scrum Framework</li>
-              <li>Kanban Principles</li>
-              <li>Sprint Planning</li>
-              <li>Sprint Retrospectives</li>
-              <li>Backlog Management</li>
-              <li>User Stories</li>
-              <li>Workflow Management</li>
-              <li>Continuous Improvement</li>
-              <li>Team Management & Collaboration</li>
-              <li>Performance Measurement</li>
-            </ul>
-          </section>
-
-          <section className="skills-category">
-            <h2>Health Informatics & Medical Coding</h2>
-            <ul>
-              <li>Electronic Medical Records (EMR) Systems</li>
-              <li>Medical Coding (ICD-10-CM, CPT, HCPCS)</li>
-              <li>Medical Terminology for Developers</li>
-              <li>Health Information Management</li>
-              <li>Healthcare Procedures & Regulations</li>
-              <li>Medical Billing Workflow Knowledge</li>
-              <li>Clinical Documentation Structure</li>
-              <li>Pathology, Anatomy & Physiology Knowledge</li>
-              <li>Ethical & Professional Conduct in Healthcare Tech</li>
+              <li>Render</li>
+              <li>Netlify</li>
+              <li>Looker</li>
             </ul>
           </section>
 
           <section className="skills-category">
             <h2>Soft Skills</h2>
             <ul>
-              <li>Analytical and critical thinking in technical and clinical environments</li>
-              <li>Effective communication and collaboration in Agile teams</li>
-              <li>Interpersonal communications and stakeholder management</li>
-              <li>Leadership and ownership of end-to-end software projects</li>
-              <li>User-focused design and human-centered thinking</li>
-              <li>Empathy and feedback-driven mindset</li>
-              <li>Emotional intelligence in team dynamics and user experience design</li>
-              <li>Conflict management and constructive problem-solving</li>
-              <li>Time management and sprint planning</li>
-              <li>Relationship building with cross-functional teams</li>
-              <li>Patient-centered care principles applied to user experience</li>
+              <li>Analytical and critical thinking</li>
+              <li>Effective communication</li>
+              <li>Collaboration in cross-functional teams</li>
+              <li>Problem-solving mindset</li>
+              <li>Time management & prioritization</li>
+              <li>Attention to detail</li>
+              <li>Data-driven decision making</li>
             </ul>
           </section>
+
         </div>
       </div>
     </div>

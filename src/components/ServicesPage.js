@@ -3,40 +3,60 @@ import { motion } from 'framer-motion';
 import { ThemeContext } from '../App';
 import './Services.css';
 
-
 const services = [
   {
-    title: 'Web Development',
-    description: 'Custom web solutions using React, Python, Flask, and modern technologies.',
+    title: 'Full Stack Web Development',
+    description: 'Custom web applications using React, Redux, Flask, SQL, Tailwind CSS, and modern web technologies.',
+    tools: 'React, Redux, Flask, SQL, Tailwind CSS, Bootstrap, HTML, CSS, JavaScript',
+  },
+  {
+    title: 'Data Analytics & Business Intelligence',
+    description: 'Data analysis, visualization, dashboard creation, EDA, and reporting using Excel, IBM Cognos, Python, and SQL.',
+    tools: 'Python, SQL, Excel, IBM Cognos, Tableau, Data Visualization, EDA, Dashboards',
   },
   {
     title: 'Healthcare App Development',
-    description: 'Building secure, user-friendly apps for healthcare providers and patients.',
+    description: 'Designing secure, user-friendly applications for healthcare providers and patients, integrating EMR and clinical workflows.',
+    tools: 'EMR, HIPAA Compliance, UI/UX, Flask, React, Healthcare Workflows',
   },
   {
-    title: 'Software Consulting',
-    description: 'Expert advice on software architecture and implementation.',
+    title: 'AI & Machine Learning Solutions',
+    description: 'Building ML and AI models using TensorFlow, PyTorch, Scikit-learn, NLP, and deep learning for predictive insights.',
+    tools: 'TensorFlow, PyTorch, Scikit-learn, NLP, Deep Learning, Predictive Modeling',
   },
   {
-    title: 'Nursing Technology Integration',
-    description: 'Integrating tech solutions to enhance Nursing workflows and patient care.',
+    title: 'DevOps & Cloud Engineering',
+    description: 'Implementing CI/CD pipelines, Docker, Kubernetes, AWS, Terraform, and cloud-native solutions for scalable deployments.',
+    tools: 'Docker, Kubernetes, Jenkins, Terraform, AWS, CI/CD, Cloud-Native Computing',
   },
   {
-    title: 'Database Administration',
-    description :'Database Architechture and Development using SQL'
-  }
-]; 
+    title: 'Application Security & DevSecOps',
+    description: 'Secure coding practices, vulnerability assessments, threat modeling, and continuous monitoring for robust software.',
+    tools: 'Secure Coding, OWASP, Threat Modeling, Vulnerability Scanning, SDLC Security',
+  },
+  {
+    title: 'Software Consulting & Architecture',
+    description: 'Providing expert guidance on system design, architecture, workflow optimization, and technical strategy.',
+    tools: 'System Architecture, Software Design, Workflow Optimization, Technical Strategy',
+  },
+  {
+    title: 'Database Design & Administration',
+    description: 'Database architecture, design, optimization, and management using PostgreSQL, SQLite, and relational database principles.',
+    tools: 'PostgreSQL, SQLite, SQL, Database Design, Data Modeling, Optimization',
+  },
+  {
+    title: 'Nursing & Healthcare Technology Integration',
+    description: 'Leveraging clinical knowledge to implement technology solutions improving patient care and nursing workflows.',
+    tools: 'EMR, Healthcare Workflows, Clinical Data Analysis, Patient-Centered Design',
+  },
+];
 
 const ServicesPage = () => {
   const { darkMode } = useContext(ThemeContext);
 
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: 'easeOut' },
-    },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
   };
 
   return (
@@ -62,6 +82,7 @@ const ServicesPage = () => {
           >
             <h3>{service.title}</h3>
             <p>{service.description}</p>
+            <span className="tooltip">{service.tools}</span>
           </motion.div>
         ))}
       </div>

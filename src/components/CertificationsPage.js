@@ -4,8 +4,36 @@ import { ThemeContext } from '../App';
 import './Certifications.css';
 
 const certifications = [
-  {
+    {
     id: 1,
+    title: 'Introduction to Data Analytics',
+    issuer: 'Coursera',
+    date: 'December 2025',
+    description:
+      'Covered data analytics foundations including data analysis, statistical analysis, data marts, relational databases, big data concepts, Apache Hadoop, Apache Spark, Apache Hive, data visualization, and analytics workflows.',
+    link: 'https://www.coursera.org/account/accomplishments/certificate/NF7QC1YAVF2H',
+  },
+  {
+    id: 2,
+    title: 'Excel Basics for Data Analysis',
+    issuer: 'Coursera',
+    date: 'December 2025',
+    description:
+      'Developed strong spreadsheet analytics skills including pivot tables and charts, data cleansing, data wrangling, Excel formulas, data manipulation, data quality, Google Sheets, and information privacy.',
+    link: 'https://www.coursera.org/account/accomplishments/certificate/WDRDP6X1PVA2',
+  },
+  {
+    id: 3,
+    title: 'Data Visualization & Dashboards with Excel and Cognos',
+    issuer: 'Coursera',
+    date: 'December 2025',
+    description:
+      'Built interactive dashboards and visual analytics using Excel and IBM Cognos Analytics, covering treemaps, scatter plots, histograms, dashboard design, data storytelling, and presentation best practices.',
+    link: 'https://www.coursera.org/account/accomplishments/certificate/88KEDC5UO9C5',
+  },
+
+  {
+    id: 4,
     title: 'Medical Billing and Coding Essentials',
     issuer: 'Coursera',
     date: 'December 2025',
@@ -14,7 +42,7 @@ const certifications = [
     link: 'https://www.coursera.org/account/accomplishments/specialization/certificate/651VG13XFW1J',
   },
   {
-    id: 2,
+    id: 5,
     title: 'Introduction to Agile Development and Scrum',
     issuer: 'Coursera',
     date: 'November 2025',
@@ -23,7 +51,7 @@ const certifications = [
     link: 'https://www.coursera.org/account/accomplishments/certificate/J1Y0K3ZVGQS1',
   },
   {
-    id: 3,
+    id: 6,
     title: 'Introduction to DevOps',
     issuer: 'Coursera',
     date: 'November 2025',
@@ -32,7 +60,7 @@ const certifications = [
     link: 'https://www.coursera.org/account/accomplishments/certificate/U4IS2CVANF1I',
   },
   {
-    id: 4,
+    id: 7,
     title: 'Application Security for Developers and DevOps Professionals',
     issuer: 'Coursera',
     date: 'November 2025',
@@ -41,7 +69,7 @@ const certifications = [
     link: 'https://www.coursera.org/account/accomplishments/certificate/CFRX1AMXAZWE',
   },
   {
-    id: 5,
+    id: 8,
     title: 'Artificial Intelligence Launchpad',
     issuer: 'Moringa School',
     date: 'October 2025',
@@ -50,7 +78,7 @@ const certifications = [
     link: 'https://moringa.my.salesforce-sites.com/certificateStatus?id=a0PQ200000MtHduMAF',
   },
   {
-    id: 6,
+    id: 9,
     title: 'AWS Academy Graduate - Cloud Foundations',
     issuer: 'Amazon Web Services (AWS)',
     date: 'June 2025',
@@ -58,7 +86,7 @@ const certifications = [
     link: 'https://www.credly.com/badges/4f87d4a2-80d7-44fc-ae0a-8d04ad75b477/linked_in_profile',
   },
   {
-    id: 7,
+    id: 10,
     title: 'Full Stack Web Development',
     issuer: 'Moringa School',
     date: 'March 2025',
@@ -67,7 +95,7 @@ const certifications = [
     link: '/Certificates/aron_kipkorir_moringa_software_engineering_cert.png',
   },
   {
-    id: 8,
+    id: 11,
     title: 'Data Visualization',
     issuer: 'freeCodeCamp',
     date: 'June 2025',
@@ -75,7 +103,7 @@ const certifications = [
     link: 'https://www.freecodecamp.org/certification/fcc48dfc922-8d03-480b-a201-002e5d015f2b/data-visualization',
   },
   {
-    id: 9,
+    id: 12,
     title: 'Front End Development Libraries',
     issuer: 'freeCodeCamp',
     date: 'June 2025',
@@ -83,7 +111,7 @@ const certifications = [
     link: 'https://www.freecodecamp.org/certification/fcc48dfc922-8d03-480b-a201-002e5d015f2b/front-end-development-libraries',
   },
   {
-    id: 10,
+    id: 13,
     title: 'JavaScript Algorithms and Data Structures',
     issuer: 'freeCodeCamp',
     date: 'May 2025',
@@ -92,7 +120,7 @@ const certifications = [
     link: 'https://www.freecodecamp.org/certification/fcc48dfc922-8d03-480b-a201-002e5d015f2b/javascript-algorithms-and-data-structures-v8',
   },
   {
-    id: 11,
+    id: 14,
     title: 'Responsive Web Design',
     issuer: 'freeCodeCamp',
     date: 'April 2025',
@@ -100,12 +128,12 @@ const certifications = [
     link: 'https://www.freecodecamp.org/certification/fcc48dfc922-8d03-480b-a201-002e5d015f2b/responsive-web-design',
   },
   {
-    id: 12,
+    id: 15,
     title: 'Bachelor of Science in Nursing',
     issuer: 'Daystar University',
     date: 'November 2023',
     description: 'Comprehensive education in nursing, health sciences, and clinical practice.',
-    link: '/Certificates/DegreeCertificate.pdf', // rename file to remove spaces
+    link: '/Certificates/DegreeCertificate.pdf', 
   },
 ];
 
