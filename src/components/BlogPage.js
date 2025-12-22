@@ -18,7 +18,7 @@ const BlogPage = () => {
       brief: 'Best practices for creating efficient APIs using Flask.',
       url: 'https://arvlemed.hashnode.dev/optimizing-flask-apis-for-healthcare',
     },
-  ]; // Manually add or edit tech blog entries here
+  ]; // Manually add or edit tech blog en
 
   const healthcareBlogs = [
     {
