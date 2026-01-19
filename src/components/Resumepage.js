@@ -26,7 +26,8 @@ const Resume = () => {
     html2pdf()
       .set({
         margin: [0.2, 0.2, 0.2, 0.2],
-        filename: 'Aron_Kipkorir_Resume.pdf',
+        filename: 'Aron_Kipkorir_Software_Engineer_Data_Analytics_Resume.pdf',
+
         html2canvas: { scale: 1.5, useCORS: true },
         jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' },
       })
@@ -41,7 +42,8 @@ const Resume = () => {
     <div className={`resume ${darkMode ? 'dark' : ''}`} aria-label="Resume page">
       <motion.header initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
         <h1>Aron Kipkorir</h1>
-        <p>Software Engineer | Full Stack Developer | Healthcare Innovator</p>
+        <p>Software Engineer | Full Stack Developer | Data Analytics & Health-Tech Specialist</p>
+
       </motion.header>
 
       <div ref={resumeRef} className="resume-content">
@@ -50,18 +52,17 @@ const Resume = () => {
         <motion.section className="resume-section" variants={sectionVariants} initial="hidden" animate="visible">
           <h2>Professional Summary</h2>
           <p>
-  As a dynamic Software Engineer with a strong foundation in Data Analytics and a clinical background in nursing,
-  I specialize in building secure, scalable, and data-driven web applications using Python (Flask), JavaScript (React),
-  SQL, and cloud-native technologies. I have hands-on experience in data analysis, statistical analysis, Excel-based
-  analytics, dashboards, and big data concepts using Apache Spark, Hadoop, and Hive.
+  As a Software Engineer with a strong foundation in Data Analytics, Databases, and a clinical background in nursing,
+  I specialize in building secure, scalable, and data-driven applications using Python, SQL, Pandas, Flask,
+  JavaScript (React), and cloud-native technologies. I have hands-on experience in relational databases,
+  transaction processing, stored procedures, and SQL-based data analysis using Python and Jupyter Notebooks.
   <br /><br />
   My healthcare background provides deep insight into clinical workflows, patient safety, and health information
   management—allowing me to design analytics and health-tech solutions that are both technically robust and
-  clinically relevant. I am skilled in Agile & Scrum, DevOps, CI/CD automation, DevSecOps, REST API development,
-  and secure software design, with additional strengths in data visualization, dashboard storytelling, and
-  analytics reporting. I am passionate about leveraging data and technology to improve decision-making,
-  system performance, and real-world impact.
+  clinically relevant. I am skilled in Agile & Scrum, DevOps, CI/CD automation, REST API development,
+  data visualization, dashboard storytelling, and analytics reporting.
 </p>
+
 
         </motion.section>
 
@@ -71,13 +72,25 @@ const Resume = () => {
           <ul>
             <li><strong>Languages:</strong> JavaScript, Python, SQL, Bash</li>
             <li><strong>Frontend:</strong> HTML, CSS, React, Redux, Tailwind CSS, Bootstrap</li>
-            <li><strong>Backend:</strong> Flask, SQLAlchemy, REST APIs, PostgreSQL, SQLite</li>
             <li>
-  <strong>Data Analytics & BI:</strong>
-  Data Analysis, Statistical Analysis, Exploratory Data Analysis (EDA),
-  Data Wrangling & Cleansing, Data Quality Management,
+  <strong>Backend & Databases:</strong>
+  Flask, SQLAlchemy, REST APIs,
+  PostgreSQL, SQLite,
+  Relational Databases,
+  Stored Procedures,
+  Transaction Processing
+</li>
+
+            <li>
+  <strong>Data Analytics & Data Science:</strong>
+  SQL for Data Analysis, Relational Databases,
+  Data Analysis & Interpretation, Data Manipulation,
+  Pandas, Jupyter Notebooks,
+  Exploratory Data Analysis (EDA),
+  Statistical Analysis, Data Wrangling & Cleansing,
   Analytics Reporting, Information Privacy
 </li>
+
 
 <li>
   <strong>Data Visualization:</strong>
@@ -177,8 +190,18 @@ const Resume = () => {
         {/* ===== Experience ===== */}
         <motion.section className="resume-section" variants={sectionVariants} initial="hidden" animate="visible">
           <h2>Experience</h2>
+          <p><strong>Coursera</strong> – Databases & SQL for Data Science with Python <em>(Jan 2026)</em></p>
+<ul>
+  <li>Performed SQL-based data analysis using relational databases and complex queries.</li>
+  <li>Worked with transaction processing, stored procedures, and database design concepts.</li>
+  <li>Used Python with Pandas and Jupyter Notebooks for data manipulation and analysis.</li>
+  <li>Applied query languages to extract, analyze, and transform structured data.</li>
+  <li>Integrated SQL workflows with Python-based analytics pipelines.</li>
+</ul>
+
           <p><strong>Coursera</strong> – Data Analytics & Visualization Training <em>(Dec 2025)</em></p>
 <ul>
+  
   <li>Completed hands-on training in data analytics, statistical analysis, and business intelligence workflows.</li>
   <li>Built Excel-based analytical reports using pivot tables, formulas, data cleansing, and data manipulation.</li>
   <li>Designed interactive dashboards and visualizations using Excel and IBM Cognos Analytics.</li>
@@ -232,7 +255,12 @@ const Resume = () => {
         {/* ===== Education ===== */}
         <motion.section className="resume-section" variants={sectionVariants} initial="hidden" animate="visible">
           <h2>Education</h2>
+          
           <ul>
+            <li>
+  <strong>Coursera</strong> – Databases and SQL for Data Science with Python <em>(Jan 2026)</em>
+</li>
+
             <li><strong>Coursera</strong> – Introduction to Data Analytics <em>(Dec 2025)</em></li>
 <li><strong>Coursera</strong> – Excel Basics for Data Analysis <em>(Dec 2025)</em></li>
 <li><strong>Coursera</strong> – Data Visualization & Dashboards with Excel and Cognos <em>(Dec 2025)</em></li>

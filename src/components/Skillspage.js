@@ -13,7 +13,7 @@ const SkillsPage = () => {
           <section className="skills-category">
             <h2>Programming Languages</h2>
             <ul>
-              <li>Python</li>
+              <li>Python (Data Science & Backend Development)</li>
               <li>JavaScript</li>
               <li>SQL</li>
               <li>Bash</li>
@@ -36,6 +36,8 @@ const SkillsPage = () => {
               <li>PostgreSQL</li>
               <li>SQLite</li>
               <li>Relational Databases</li>
+              <li>Stored Procedures</li>
+              <li>Transaction Processing</li>
               <li>Data Marts</li>
             </ul>
           </section>
@@ -44,10 +46,12 @@ const SkillsPage = () => {
             <h2>Data Analytics & Business Intelligence</h2>
             <ul>
               <li>Data Analysis & Interpretation</li>
-              <li>Statistical Analysis</li>
-              <li>Data Wrangling & Cleansing</li>
-              <li>Data Quality Management</li>
+              <li>Data Manipulation & Wrangling</li>
+              <li>Pandas (Python)</li>
+              <li>Jupyter Notebooks</li>
               <li>Exploratory Data Analysis (EDA)</li>
+              <li>Statistical Analysis</li>
+              <li>Data Quality Management</li>
               <li>Analytics & Reporting</li>
               <li>Information Privacy & Data Ethics</li>
             </ul>

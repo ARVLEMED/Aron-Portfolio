@@ -8,7 +8,8 @@ const Home = () => {
     <div className="home">
       <div className="home-content">
         <h1>Hi, I'm Aron Kipkorir</h1>
-        <p>Software Engineer | Full Stack Developer | Healthcare Innovator</p>
+        <p>Software Engineer | Full Stack Developer | Data Analytics & Health-Tech Specialist</p>
+
         
         <div className="cta-buttons">
           <Link to="/resume" className="btn btn-primary">View My Resume</Link>
