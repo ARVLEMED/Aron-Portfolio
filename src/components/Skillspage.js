@@ -79,6 +79,21 @@ const SkillsPage = () => {
               <li>AI Ethics & Responsible AI Practices</li>
             </ul>
           </section>
+          <section className="skills-category">
+            <h2>Tools & Platforms</h2>
+            <ul>
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>VS Code</li>
+              <li>Postman</li>
+              <li>Render</li>
+              <li>Netlify</li>
+              <li>Looker</li>
+              <li>Jira</li>
+              <li>Jenkins</li>
+              <li>Terraform</li>
+            </ul>
+          </section>
 
         </div>
 
@@ -114,26 +129,33 @@ const SkillsPage = () => {
           <section className="skills-category">
             <h2>DevOps & Cloud</h2>
             <ul>
-              <li>Docker</li>
-              <li>Kubernetes</li>
-              <li>Jenkins</li>
-              <li>Terraform</li>
+              <li>Docker & Containerization</li>
+              <li>Kubernetes & OpenShift</li>
+              <li>Microservices Architecture</li>
+              <li>Cloud-Native Computing</li>
+              <li>Application Deployment</li>
               <li>CI/CD Pipelines</li>
+              <li>Service Mesh (Istio)</li>
+              <li>Scalability & High Availability</li>
+              <li>Command-Line Interface (CLI)</li>
+              <li>Terraform</li>
               <li>AWS (EC2, IAM, Lambda, Elastic Beanstalk)</li>
               <li>Linux Server Administration</li>
             </ul>
           </section>
 
           <section className="skills-category">
-            <h2>Tools & Platforms</h2>
+            <h2>Cybersecurity & Cryptography</h2>
             <ul>
-              <li>Git</li>
-              <li>GitHub</li>
-              <li>VS Code</li>
-              <li>Postman</li>
-              <li>Render</li>
-              <li>Netlify</li>
-              <li>Looker</li>
+              <li>Cryptography & Encryption (DES, PKI Concepts)</li>
+              <li>Public Key Infrastructure (PKI)</li>
+              <li>Network Security</li>
+              <li>Security Engineering</li>
+              <li>Security Management</li>
+              <li>Cybersecurity Fundamentals</li>
+              <li>Secure Data Storage</li>
+              <li>Wireless Network Security</li>
+              <li>Blockchain (Foundations)</li>
             </ul>
           </section>
 
